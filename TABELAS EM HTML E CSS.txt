@@ -161,4 +161,30 @@ OBS.:   EXPANSÃO DE COLUNA é para ocupar a coluna ao LADO;
 
 	A segunda <td> vai ter uma expansão de 2 LINHAS.
 
+
+AGRUPAMENTO DE COLUNAS
+
+<colgroup> : Para agrupar as colunas de uma tabela.
+
+<col> : Para selecionar as colunas de uma tabela.
+
+	ex.:
+	<colgroup>
+            <col class="ciano">
+            <col class="violeta">
+            <col class="ciano">
+            <col class="violeta">
+        </colgroup>
+
+CADA <col> equivale a uma coluna da tabela, se tiverem mais 
+colunas, SÓ SERÃO SELECIONADAS AS 4 PRIMEIRAS(Neste caso).
+
+Para fazer com que uma unica <col> selecione mais colunas utilize:
+
+	ex.:
+		<col span='2'>
+
+	Assim a <col> irá selecionar ela e a próxima. Ou mais, 
+	caso aumente o valor de 'span'.
+
  
