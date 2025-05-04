@@ -575,5 +575,32 @@ tr:nth-child() : Esta pseudo-classe vai modificar linhas
 	Vai tornar as linhas impares com fundo cinza.
 
 
+PARA DEIXAR O CABEÇALHO FIXO
+
+position: relative; : Para tornar a posição do elemento PAI(table),
+		      relativa e possibilitar a mudança de 
+		      'position' do FILHO.
+
+position: sticky; : Para fixar o elemento.
+
+top: -1px; : No topo da página.
+
+	ex.: thead > tr > th {
+            	position: sticky;
+            	top: -1px;
+            	background-color:  rgb(65, 64, 64);
+	     {
+
+	Vai tornar os <th>(table header) 
+
+	fixo(position: sticky;).]
+
+	No topo(top: -1px;).
+
+	E o fundo(Backgroud-color) deve ter a cor igual ao fundo
+	original para que este fundo se mova.
+
+	LEMBRANDO... A <table> deve ter a posição RELATIVA, para
+	que o restante da tabela possa ter a position alterada.
 
  
