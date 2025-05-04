@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(169, 250, 186);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1#principal{
+    background-image: linear-gradient(to right, rgb(201, 70, 70), rgb(169, 250, 186));
+    color: white;
+    text-align: center;
+}
+
+h1{
+    color: rgb(5, 87, 19);
+}
+
+h2{
+    color: rgb(63, 63, 63);
+}
+
+.basico{
+    background-image: linear-gradient(to right, rgb(75, 238, 75), rgb(169, 250, 186));
+}
+.intermediario{
+    background-image: linear-gradient(to right, rgb(245, 245, 105), rgb(169, 250, 186));
+}
+.avançado{
+    background-image: linear-gradient(to right, rgb(248, 101, 101), rgb(169, 250, 186));
+}

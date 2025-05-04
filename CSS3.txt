@@ -1,0 +1,656 @@
+CSS3
+
+COMANDOS:
+
+height: ALTURA.
+width: LARGURA.
+
+
+border-width: LARGURA DAS BORDAS.
+borde-radius: ARREDONDAR BORDAS.
+border-style: ESTILO DE BORDAS. Mais usados(solid: comum / 
+	      dashed: tracejado / dotted: Pontilhado. )
+border: BORDAS. Sequencia: largura, style, color.
+
+padding: ENTRE O CONTEÚDO E A BORDA. 
+	 Sequencia: Cima, direita, baixo, esquerda.
+
+margin: ALÉM DA BORDA.
+	Sequencia: Cima, direita, baixo, esquerda.
+margin: auto; : PARA CENTRALIZAR A BOX HORIZONTALMENTE.(box-level)
+
+outline-width: LARGURA DA OUTLINE.
+outline-style: ESTILO DA OUTLINE.
+outline-color: COR DA OUTLINE.
+outline: ESPAÇO ENTRA A BORDA E A MARGEM.
+	 Sequencia: largura, style, color.
+
+display: block; : BOX-LEVEL. Mostra o conteúdo.
+display: inline; : INLINE-LEVEL. Mostra o conteúdo.
+display: none; : ESCONDE O CONTEÚDO.
+display: inline-block; : COLOCA UM BLOCO NA MESMA LINHA.
+
+box-shadow: SOMBRA.
+	    Sequencia: dslc vertical, dslc horizontal, 
+	    espalhamento, sombra.
+
+text-decoration: none; : TIRA SUBLINHADO OU QUALQUER DECORAÇÃO.
+text-decoration: underline; : SUBLINHA O TEXTO.
+
+font-variant: small-caps; : TORNA TODAS AS LETRAS MAIÚSCULAS,
+			    MAS A 1a LETRA FICA MAIOR.
+
+
+PARA FAZER COM QUE AS LETRAS SE AJUSTEM A TELA:
+
+font-size: 10vw; : Isso vai fazer com que as letras SEMPRE ocupem
+		   10% da width(largura) da tela.
+		   Para diminuir o tamanho das letras basta 
+		   diminuir o valor.
+
+PARA FAZER COM QUE AS CAIXAS VIREM CAIXAS QUE SE AJUSTAM AO
+CONTEÚDO:
+
+display: inline-block; : Isso vai fazer com que a largura e a 
+		  	 altura da caixa se ajustem ao conteúdo.
+
+
+
+
+Estilo InLine
+
+	Basta colocar 'style' dentro da tag:
+	
+	ex.:  <h2 style="color: darkred;">
+
+	Vai alterar a cor da tag no site.
+	Isso é geralmente usado apenas para casos expecíficos.
+
+Estilos Locais
+
+	Basta ciar a tag <style> dentro do <head> do seu HTML.
+
+	ex.: 
+	<style>
+        body {
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+	</style>
+
+	Vai alterar a cor de fundo e a fonte do 'body'.
+
+
+Estilos Externos
+
+	Basta Criar um <link-CSS> e exportar o arquivo .CSS
+
+	Para criar o arquivo, caso não tenha feito antes, basta
+	segura CTRL + click e o VScode vai criar o arquivo 
+	para vc.
+
+
+
+
+CONFIGURAÇÃO GLOBAL DAS CSS:
+
+*{} : Toda modificação dentro desse local será para a pág inteira.
+
+	ex.:
+	*{
+            height: 100%;
+        }
+	Toda a tela vai ficar com a altura total(Necessário para
+	Degradê)
+
+
+
+
+CORES(Circulo Cromático)
+
+Cores primárias: Amarelo, vermelho, Azul.
+
+Cores secundárias: Laranja, Violeta(Roxo), Verde.
+
+Cores Terciárias: Amarelo-esverdeado, Amarelo-alaranjado,
+		  Vermelho-Alaranjado, Vermelho-arroxeado,
+		  Azul-arrocheado, Azul-esverdeado.
+
+	Para classificar as cores terciárias SEMPRE dizemos a 
+	cor primária e depois a cor secundaria. 
+	EX.: Azul-esverdeado.  (Azul: cor primária, 
+				Verde(esverdeado): cor secun.)
+
+
+	PALETAS DE CORES geralmente tem de 3 à 5 cores!
+
+DEGRADÊ
+
+background-image: linear-gradient() : Para criar o efeito degrade.
+
+	ex.:  
+	background-image: linear-gradient(to right, white, blue);
+	
+	Assim vai criar um degradê de branco para azul da direita
+	para esquerda.
+	Os 3 Parâmetros(Podem ter quantas cores for necessário):
+	1-Direção= to right, to left, to botton, to top, etc...
+	2-Primeira cor;
+	3-Segunda cor;
+	4-...
+
+FONTES
+
+serif: Com tracinhos nas pontas das letras.
+sans-serif: Sem os tracinho nas pontas das letras.
+monospace: Letras com a largura igual.
+
+	Medida absoluta: px (pixel)
+
+	Medida relativa: em (altura do 'm')
+
+	16px GERALMENTE é o mesmo tamanho de 1em.
+
+font-style: Estilo da fonte.(italico, etc...)
+font-weigth: Peso da fonte.(Fino ou grosso(NEGRITO))
+font-size: Tamanho da fonte.(1em, 16px...)
+font-family: Tipo da fonte.(Arial, etc...)
+
+ShortHand: Para utilizar todas as funções a cima em uma unica linha.
+
+	ex.: font: italic bolder 3em 'arial', sans-serif;
+
+	SEQUENCIA:
+	1- font-style;
+	2- font-weight;
+	3- font-size;
+	4- font-family.
+	
+	A sequencia sempre será seguida, mas não é necessário ter
+	todas as funções.
+
+Google fonts: Para encontrar novas fontes externas.
+
+Dafonts.com: Site para baixar fontes externas.
+
+FONTES EXTERNAS
+
+Para fontes que não foram baixadas basta usar '@import' e o codigo
+da fonte disponivel no site(google fonts).
+
+	EX.: @import arial, Helvetica, sans-serif;
+
+
+Para fontes que foram baixadas basta usar '@font-face {}'.
+
+	ex.: 
+	@font-face {
+		font-family: 'love';
+		src: url('love larry.otf') format('opentype');
+	}
+
+	O 'font-face{}' mostra alguns parametros. Mas vamos nos
+	atentar ao 'src: url()' que sera o nome do arquivo.
+	Que pode ter alguns formatos (format()):
+	
+	MAIS UTILIZADOS:
+	* opentype (.otf)
+	* truetype (.ttf)
+
+	OUTROS:
+	*embedded-opentype
+	*truetype-aat
+	*svg
+
+	Dentro do 'format()' vai colocar com o tipo de arquivo da
+	fonte.
+
+	Dentro do 'font-family' pode-se colocar o nome que desejar
+	para localizar e adicionar com o parametro 'font-family'
+	no seu CSS.
+
+ex.: h1{
+            font-family: 'love', Times, serif;
+            font-size: 3em;
+        }
+	'love' vai chamar a fonte adicionada anteriormente.
+	'Times' para caso o 'love não funcione'.
+
+UTILIZE SEMPRE UMA PASTA PARA AS FONTES BAIXADAS. E ELA TERÁ
+QUE ESTAR NA MESMA PASTA DO SEU SITE. 
+
+
+ID e Classes
+
+ID em CSS é #(hashtag)
+
+	ex.:
+	h1#principal {
+		color: white;
+	}
+
+
+Class em CSS é .(ponto)
+
+	ex.:
+	h1.principal {
+		color: white;
+	}
+
+
+É recomendado que itens não tenham o mesmo 'id'. Caso seja
+necessário fazer alterações em 2 ou mais itens do mesmo tipo
+usa-se 'class'.
+
+
+PSEUDO-CLASSES
+
+É referido com ':'(dois pontos) para alterar o estado de classes.
+
+:hover : Quando o mouse passar por cima.
+
+	ex.: div:hover{
+            	background-color: yellowgreen;
+             } 
+	Quando passar o mouse por cima da 'div' vai mudar a cor
+	de fundo.
+
+:visited : Quando visitar o link.
+
+	ex.: a:visited{
+            	color: lightcoral;
+             }
+	Quando visitar o 'a'(link) vai mudar a cor do texto.
+
+:active : Quando clicar no link.
+
+	ex.: a:active{
+            	color: yellow;
+             }
+	Quando clicar no 'a'(link) vai mudar a cor do texto.
+	
+
+PARA ALTERAR ITENS 'FILHOS' DE UM ELEMENTO:
+
+div > p: Vai alterar somente os 'p'(paragrafos) dentro 
+	 da 'div'.
+
+	ex.:  
+	div > p{
+            display: none;
+        }
+        div:hover > p{
+            display: block;
+        }
+
+	No 'div > p' : Vai esconder os paragrafos dentro da div
+		       com o comando 'display: none'.
+
+	No 'div:hover > p' : Vai mostrar os paragrafos dentro da
+			     'div' com o comando 'display: block'.
+
+
+PSEUDO-ELEMENTOS
+
+É referido com '::'(dois pontos 2x) para alterar o estado de elementos.
+
+::before : Para adicionar algo ANTES do elemento.
+
+::after : Para adicionar aldo DEPOIS do elemento.
+
+	ex.: .especial::before{
+            	content: '&rArr; ';
+             }
+             .especial::after{
+            	content: ' &lArr;';
+             }
+
+	Vai adicionar '&rArr' ANTES e '&lArr' DEPOIS do elemento
+	referido como uma classe '.especial'.
+
+
+MODELO DE CAIXAS(box-model)
+
+conteúdo > padding > border > outline > margin
+
+Todo e qualquer conteúdo em HTML e CSS tem uma 
+altura(height) x largura(width).
+
+TIPOS DE CAIXAS
+
+box-level: Sempre irá criar a proxima box-level na proxima linha.
+	   E sempre vai ocupar 100% da tela(viewport).
+
+	ex.: <div> <p> <main> <h1> etc...
+
+inline-level: Sempre irá continuar na mesma linha. E vai ocupar 
+	      somente o espaço do seu conteúdo.
+
+	ex.: <a> <strong> <span> <input> etc...
+
+
+border: Para adicionar bordas na box.
+
+	ex.: border-width: 10px;
+             border-style: solid;
+             border-color: black;
+
+	ou: border: 10px solid black;
+
+	Dos dois modos está correto, mas no segundo será mais
+	pratico. Sempre nesta sequencia: width, style, color.
+
+
+padding: Para adicionar um espaço entre o conteúdo e a borda.
+
+	ex.: padding-top: 10px;
+             padding-right: 10px;
+             padding-bottom: 10px;
+             padding-left: 10px;
+
+	ou: padding: 10px 10px 10px 10px;
+
+	Dos dois modos está correto, mas no segundo será mais 
+	prático. Sempre nesta sequencia: top, right, bottom, left.
+
+	OBS.: 
+		Para colocar o mesmo tamanho em todos os lados:
+
+		ex.: padding: 10px;
+
+	Para deixar cima e baixo de um tamanho, 
+	esquerda e direita de outro:
+
+		ex.: padding: 20px 10px;
+
+		Assim o primeiro parametro muda cima e baixo em 
+		um só, e esquerda e direita em um só.
+
+
+margin: Para adicionar um espaço fora da borda.
+
+	ex.: margin-top: 10px;
+             margin-right: 10px;
+             margin-bottom: 10px;
+             margin-left: 10px;
+
+	ou: margin: 10px 10px 10px 10px;
+
+	Dos dois modos está correto, mas no segundo será mais 
+	prático. Sempre nesta sequencia: top, right, bottom, left.
+
+	PARA CENTRALIZAR E MUDAR A LARGURA DE CIMA E BAIXO:
+
+	ex.: margin: 10px auto 10px auto;
+
+	Como o 'auto' centraliza horizontalmente, basta uasar ele
+	apenas no 'right' e 'left'.
+
+
+outline: Espaço entre a border e a margin. Se comporta igual borda.
+
+	ex.: outline: 5px dashed salmon;
+
+	Sequencia: width, style, color.
+
+
+display: block; : Vai tranformar o elemento em Box-Level.
+	Tipo tranformar um <a> em uma <div>.
+
+display: inline; : Vai tranformar o elemento em Inline-Level.
+
+	Tipo transformar uma <div> em um <a>.
+
+display: inline-block; : Vai permitir que um Box-level 
+	 tenha caracteristicas de Inline-Level ou vice e versa.
+
+	Assim permitindo colocar Box-Levels na mesma linha.
+	E Inline-levels com: margin, width, height...
+
+
+box-shadow: Sombra nas box.
+
+	ex.: box-shadow: 1px 1px 1px black;
+
+	Vai criar uma sombra.
+	sequencia:
+	1- Deslocamento horizontal;
+	2- Deslocamento vertical;
+	3- Espalhamento;
+	4- Cor da sombra.
+
+border-radius: Bordas arredondadas.
+
+	ex.: border-radius: 10px;
+
+	Vai arredondar todas as bordas.
+
+	Caso você queira fazer uma box em formato de bola,
+	Para isso é necessário que a ALTURA E LARGURA sejam iguais.
+	
+	ex.: width: 100px;
+	     height:100px;
+	     border-radius: 50%;
+
+	Vai fazer sua box virar uma bola. 
+
+
+VARIÁVEIS EM CSS
+
+:root{} : Para criar a 'raiz' do CSS. Algo que vai valer para 
+	  todo o código.
+
+--NomedaVariavel : Para criar uma variavel. Usa-se '--'(2 traços)
+
+	ex.:  :root{
+    		  --cor0: #c5ebd6;
+	      }
+
+	Vai criar uma variavel com uma cor. Para caso vc queira 
+	mudar a paleta de cores do seu site, basta mudar aqui.
+	PARA SELECCIONAR A COR:
+
+		- Aperte CRTL + ESPAÇO,  e vá até o final da lista
+		  de cores.
+
+	No seu código ficará assim:
+
+		background-color: var(--cor1);
+
+	Vai aparecer como 'var'.
+
+
+PARA CENTRALIZAR UMA IMAGEM
+
+	Basta tranforma-la em bloco e depois colocar uma margem
+	automatica.
+
+	ex.: img{
+    		display: block;
+    		margin: auto;
+	     }
+
+	Assim vai centralizar a sua <img>.
+
+
+PARA DIVIDIR UMA <ul> EM COLUNAS
+
+	Basta colocar o parametro 'columns'.
+
+	ex.: ul{
+    		columns: 2;
+	     {
+
+	Vai dividir a lista em 2 colunas.
+
+
+PARA TROCAR O ICONE DE UMA LISTA POR UM EMOJI
+
+	Basta trocar o 'type' original para o codigo do emoji
+	colocando uma '\'(contra-barra) antes.
+
+	ex.: list-style-type: '\2714';
+
+	Vai substituir o 'type' para o Emoji.
+
+
+PARA DAR UM ESPAÇO ENTRE O EMOJI E A LISTA
+
+	Basta colocar o código: '\0020' ou '\00A0'
+
+	ex.: list-style-type: '\2714\0020';
+
+
+PARA COLOCAR UM EMOJI AO LADO DE QUALQUER ELEMENTO
+
+	Basta usar '::before' ou '::after' e mudar o conteúdo.
+
+	ex.:  a::after{
+    		content: '\0020\1F517';
+	      }
+	
+
+
+IMAGENS DE FUNDO
+
+Para adicionar uma imagem de fundo utilize:
+
+background-image: url(CTRL+SPACE)
+
+	ex.:  background-image: url(imagens/wallpaper001.jpg);
+
+
+Também é possivel adicionar uma imagem externa, basta digitar
+a URL da imagem dentro de 'url()' DENTRO DE ASPAS.
+
+	ex.: background-image: url('https://gustavoguanabara
+	     .github.io/html-css/imagens/mascote.png');
+
+TODA IMAGEM por padrão vai se repetir uma do lado da outra no seu
+tamanho padrão caso ela seja menor que a viewport. Mas caso você
+não queira essa repetição utilize:
+
+	background-repeat: no-repeat;
+
+	Tambem temos:
+
+		background-repeat: repeat-x;
+
+	Para repetir apenas no eixo X(Horizontal)
+
+		background-repeat: repeat-y;
+
+	Para repetir apenas no eixo Y(Vertical)
+
+POSIÇÃO DOS FUNDOS
+
+background-position : Para mudar a posição do ponto de ancoragem
+		      da imagem. 
+
+	Positions:
+		LINHA  -  COLUNA
+
+		left/right top: É o padrão, canto superior
+				esquerdo/direito;
+		left/right center: Lado esquerdo/direito central; 
+		left/right bottom: Canto inferior esquerdo/
+				   direito;
+		center top/bottom: Centro superior/inferior.
+		center center: Centro da imagem.
+
+Para alterar o tamanho da imagem de fundo:
+
+	background-size: 50px;
+	Vai tornar a imagem de fundo em imagens de 50px x 50px.
+
+	Porém existem valores pre-determinados como:
+
+	auto: Vai adaptar de acordo com o navegador.
+	contain: Vai adaptar o fundo sem cortar a imagem;
+	cover: Vai adaptar o fundo cortando a imagem e ocupando
+	       100% da viewport.(Mais recomendado).
+
+	100% 100%: Vai utilizar 100% da altura e 100% da largura
+		   da caixa.
+		   (Para ocupar um fundo de uma div é melhor.)
+
+Para tornar a imagem de fundo fixa e o conteudo movel:
+
+	background-attachment: fixed;
+	Vai tornar o fundo fixo.
+
+	E combinando com 'background-size: cover;' vai tornar
+	o fundo fixo e 100% preenchida a viewport.
+
+	ex.:  background-size: cover;
+              background-attachment: fixed;
+
+Para ALINHAR uma imagem no centro da ViewPort:
+	
+	margin:0px;   ->(PARA TIRAR A MARGEM PADRÃO DO NAVEGADOR)
+	height: 100vh;
+	O numero é a porcentagem de 'vh'(altura da viewport).
+		
+
+SHORTHAND BACKGROUND
+
+	color > image > position > repeat > attachment
+	OBS.: O 'size' não funciona na ShortHand.
+
+	ex.:  background: black 
+	      url(imagens/wallpaper002.jpg) center center 
+	      no-repeat fixed;
+	
+	      background-size: cover;
+
+	Desta forma vai adicionar no 'background': 
+	1- color;
+	2- image;
+	3- position;
+	4- repeat;
+	5- attachment.
+	E o 'size' separado pois não funciona no ShortHand.
+
+
+CENTRALIZAÇÃO VERTICAL DE CAIXAS
+
+Toda caixa tem uma posição(position) padrão 'static', mas para 
+centralizar uma caixa verticalmente é necessario alterar 
+a position para 'absolute'.
+
+position: relative; : é a posição para a box PAI, para que 
+		      possamos fazer alterações na box FILHO.
+
+position: absolute; : Para podermos alterar a posição manualmente.
+		      Usando 'left' e 'top'.
+
+	ex.: position: absolute;
+	     left: 50%;
+             top: 50%;
+	Assim alterando a posição para a metade de cada parametro
+
+Porém ainda não estará alinhado no centro, porque o ponto de 
+ancoragem de qualquer caixa é no canto superior esquerdo, 
+portanto, a caixa alinhou só o canto superior esquerdo ao centro.
+Para resolver este problema utilizamos:
+
+transform: translate() : Para mudar o ponto de ancoragem da caixa.
+
+	ex.: transform: translate(-50%, -50%);
+	Com o sinal de '-'(menos) antes dos valores para 
+	centralizar o ponto de ancoragem ao centro da box.
+
+	Assim teremos:
+
+	ex.: position: absolute;
+	     left: 50%;
+             top: 50%;
+
+	     transform: translate(-50%, -50%);
+
+	E assim alinhando a box ao centro.
+
+	
+	
+
+

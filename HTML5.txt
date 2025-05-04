@@ -1,0 +1,577 @@
+HTML:5
+
+Referencias:
+
+- Mozilla developer Network;
+- World wide web consortium;
+- Web hypertext application technology working group;
+- Refsnes data;
+
+HTML
+
+Tags Semânticas:
+
+<header>: Cabeçalho.
+	<nav>: Menu.
+		<a>: links do menu(Neste caso).
+
+<main>: Principal.
+	<section>: Seção.
+		<article>: Artigo.
+			<aside>: Relativo ao arquivo.
+
+<footer>: Rodapé.
+	<p>: Site feito por...(Neste caso).
+
+
+
+<hr> : para fazer uma linha horizontal.
+
+<br> : Para quebrar linha.
+
+&lt; &gt; : para mostrar o simbolo < e > no site.
+
+<!-- --> : Comentário.
+
+
+
+Simbolos especiais:
+
+
+&copy; : Cria o simbolo de copyright
+
+&reg; : Cria o simbolo de marca registrada.
+
+&trade: Cria o simbolo de Trade mark.
+
+&euro; : Cria o simbolo de euro.
+
+&Delta; : cria o simbolo de delta.
+
+etc...
+
+Para adicionar EMOJIS use: &#xCODIGO(sem o 'U-') do site EmojiPedia.
+
+	ex.: &#x1F596;
+	     &#x1F913;
+
+
+TAMANHO e TIPOS de IMAGENS:
+
+JPEG: Para fotos grandes(Alta compactação).
+
+PNG: Para fotos co fundo transparente.
+
+OBS.: Porém, isso não é regra!!!
+
+
+Formatos:
+
+máx 1500 de largura.
+
+em média é 600 de largura. 200 Para imagens pequenas.
+
+Vai depender do seu objetivo, NÃO É REGRA!!!
+
+50 de resolução e 70% de qualidade no gimp.
+
+
+<img> : Para adicionar imagens.
+
+	ex.:     <img src="logocss200.png" alt="Logo CSS">
+
+	OBS.: 'src' é o nome do arquivo. 'alt' é um texto 
+	alternativo. 
+
+	UTILIZE O ATALHO ctrl+espaço para encontrar as imagens
+	internas.
+
+Para adicionar imagens externas use o link da imagem no 'src'
+
+	ex.: <img src="https://www.globalcloudteam.com/
+		wp-content/uploads/2023/08/javascript.webp"
+		alt="Logo javascript">
+
+	Copie o link da imagem na internet e cole no 'src'. 
+
+
+
+ICONE de FAVORITO
+
+Para gerar um icone de favorito use o site: favicon.io
+
+Para adicionar no site utilize: <link:favicon>
+
+	ex.: <link rel="shortcut icon" href="favicon.ico"
+
+	De prferência em cima do <title>
+
+
+HIERARQUIA DE TÍTULOS
+
+h1 > h2 > h3 > h4 > h5 > h6
+
+O h1 é o titulo. O h2 sub-titulo. O h3 sub-titulo do h2... Até
+o h6.
+
+
+Para criar um paragrafo<p> de 'bla-bla-bla' digite: lorem
+
+
+SEMÂNTICA(Foco em significado e não em forma(CSS).)
+
+<strong> : Negrito
+
+<em> : Itálico
+
+<mark> : Texto marcado(marca texto)
+
+<ins> : Texto inserido(Sublinhado)
+
+<del> : Texto deletado(Riscado)
+
+<sup> : Texto subrescrito(potência, acima)
+
+<sub> : Texto subscrito(abaixo)
+
+<code> : Código-fonte(Para ficar igual no terminal.)
+
+<pre> : Pré-formatação(Para formatar igual código.)
+
+<q> : Citações(Entre aspas).
+
+<blockquote> : Citações completas.
+
+<abbr> : Abreviações(Para mostrar o significado das abreviações)
+	
+	ex.: <abbr title="Cascading Style Sheets">CSS</abbr>
+
+	Vai aparecer o significado na abreviação CSS.
+
+<bdo> : Texto invertido(Frases ao contrario)
+
+	ex.: <bdo dir="rtl">Estou aprendendo a criar coisas 
+	     em HTML.</bdo>
+	Vai mostrar a frase invertida. No dir='rtl' significa:
+	'right to left'(Direita pra esquerda).
+
+
+NÃO SEMÂNTICA
+
+<b> : Negrito
+<i> : Itálico
+<big> : Texto grande
+<small> : Texto pequeno
+<u> : Sublinhado
+
+
+LISTAS ORDENADAS
+
+<ol> : Lista ordenada
+
+<li> : Item da lista
+
+	ex.: <h2>Listas ordenadas</h2>
+    		<ol type="1">
+        		<li>Acordar
+        		<li>Ligar par o joão
+        		<li>Tomar café
+		</ol>
+
+	Cria a lista ordenada com indices numéricos(type='1').
+	Types:
+	1 - Númerico;
+	A/a - Alfabético;
+	I/i - Romanos.
+
+LISTAS NÂO ORDENADAS
+
+<ul> : Lista desordenada
+
+	ex.:  <h2>Listas não ordeenadas</h2>
+    		<ul type="circle"> 
+        		<li>Pão</li>
+        		<li>Leite</li>
+        		<li>Tomate</li>
+		</ul>
+
+	Cria uma lista desordenada, com indices de formatos.
+	Types:
+	disc - Disco vazio;
+	circle - Circulo preenchido;
+	square - Quadrado.
+
+Para fazer listas dentro de outras:
+	
+	ex.:  
+	<ol>
+             <li>Antigas</li>
+        	<ol type="a">
+            	   <li>Clipper</li>
+            	   <li>Visual Basic</li>
+            	   <li>Fortran</li>
+            	   <li>Delphi</li>
+        	</ol>
+             <li>Novas</li>
+        	<ol type="a" start="5">
+            	   <li>PHP</li>
+            	   <li>Python</li>
+            	   <li>JavaScript</li>
+            	   <li>Kotlin</li>
+        	</ol>
+
+	Na segunda lista utilizou o 'start='5'' para a lista
+	começar no indice 5, e como é elfabético(type='a')
+	começou na letra 'e'.
+
+Os TYPES estão obsoletos. O CORRETO é fazer isso no CSS:
+
+<style>
+        ol {
+            list-style-type: decimal;
+        }
+        ul {
+            list-style-type: disc;
+        }
+</style>
+
+	Desta forma é a atual. Porém o <ol>(lista ordenada)
+	o 'type' ficou diferente.
+	Types:
+	decimal - Numerico;
+	lower-alpha - Alfabetico minusculo;
+	upper-alpha - Alfabético maiusculo;
+	lower-roman - Romano minusculo;
+	upper-roman - Romano maiusculo;
+	etc...
+
+
+LISTA DE DEFINIÇÕES
+
+<dl> : Lista de definições
+
+<dt> : Termo
+<dd> : Descrição
+
+ex.: <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de Marcação para a criação de um site.</dd>
+     </dl>
+Tipo um dicionário. Com Termos<dt> e Significados<dd>.
+
+
+
+LINKS EXTERNOS
+
+    ANCORAGEM
+	<a> : Para fazer uma ancoragem de link.
+		ex.: 
+<h1>Usando links externos</h1>
+    <p>Você Pode acessar o meu 
+    <a href="https://gustavoguanabara.github.io/">
+    repositório público no GitHub</a></p>
+
+	No 'href' vai o link. e dentro de <a> coloca a frase 
+	que vai aparecer destacada e ancorada ao link desejado.
+
+Para o link não sobrepor o site usamos:
+
+target='_blank' : Pagina em branco.
+rel='external' : Externo.
+
+	ex.: <p>Você Pode acessar o meu 
+	<a href="https://gustavoguanabara.github.io/" 
+	target="_blank" rel="external">repositório público
+	GitHub.</a></p>
+
+Assim o link vai direcionar sem sobrepor o site, 
+em uma nova guia. Recomendado para sites externos.
+
+
+LINKS INTERNOS
+
+Vamos utilizar o <a>, porém ligando aos arquivos internos.
+
+	ex.: <p>Esta é a primeira página do meu site.
+	     Se você quiser, pode acessar também a minha
+	     <a href="pag002.html" rel="next">Segunda página
+	     </a></p>
+
+	Quando clicar vai direcionar a segunda pagina. E para 
+	facilitar utilizou: rel='next', para direcionar ao 
+	algoritmo do Google que é a proxima pág.
+
+	rel='next' : Para a proxima página;
+	rel='prev' : Para a página anterior.
+	rel='nofollow' : Para páginas externas que não fazem
+	       parte do site. patrocinadores, colab, etc...
+
+ctrl+espaço: Para encontrar arquivos internos.
+
+../ : Para voltar páginas.
+
+	ex.: <p><a href="../index.html">Voltar para a 
+	     primeira página.</a></p>
+
+	Volta para a página que estava na pasta anterior a 
+	esta pasta que está localizada esta página.
+
+target='_self' : Para links do seu proprio site.
+
+
+LINKS PARA DOWNLOAD
+
+	Para efetuar download no seu site usamos a ancoragem 
+	de um link interno com <a> e no href='link do arquivo
+	interno.pdf' e usamos o parametro 'download='nome do 
+	arquivo.pdf'' e o type='aplication/pdf'
+
+download='nomeDoArquivo.zip' : Para sinalizar que é para 
+			       download.
+
+type='aplication/zip' : Para validar o tipo do arquivo para 
+			download. Com o tipo do arquivo depois
+			da barra(/).
+
+
+	ex.:  <li><a href="livro/01 - História da 
+		Internet.pdf" download="livro/01 - História da
+		Internet.pdf" type="aplication/pdf">Baixar 
+		livro em PDF.</a></li>
+	
+	Vai localizar o arquivo com o link de ancoragem e com o
+	'download' e 'type' validam o link como DOWNLOAD.
+
+
+
+
+IMAGENS DINÂMICAS
+
+<picture> : Para adicionar imagens dinâmicas.
+
+<source-media-type> : Para adicionar imagens a apartir do 
+		      tamanho da tela.
+
+	ex.: 
+	<picture>
+        <source media="(max-width: 750px)" 
+	srcset="Imagens/foto-p.png" type="image/png">
+
+        <source media="(max-width: 1000px)" 
+	srcset="Imagens/foto-m.png" type="image/png">
+
+        <img src="Imagens/foto-g.png" alt="Imagem flexivel">
+    	</picture>
+
+
+	ALTERE o 'min-width' PARA: max-width.
+	'max-width' é o tamanho da tela máximo para a imagem
+	aparecer. 'srcset' é o arquivo da imagem. 'type' é 
+	o formato da imagem.
+
+	Neste caso, se a tela for menor que 750px vai aparecer
+	a imagem P. Se a tela for menor que 1000px vaa aparecer
+	a imagem M. E a cima de 1000px é a imagem G.
+
+	A tag <img> é para a imagem de tela cheia(Monitor).
+	Não é necessário um <source> para esta imagem.
+
+	A ORDEM DO <source> IMPORTA!!! DA MENOR IMAGEM PARA
+	A MAIOR.
+
+AUDIO HTML
+
+<audio> : Para adicionar aúdios.
+
+<source-src> : Para adicionar audios dependendo do formato.
+
+	ex.:
+	<audio preload="metadata" autoplay controls loop>
+        <source src="midia/teste.mp3" type="audio/mpeg">
+    	</audio>
+
+
+	Os parametros em <audio>: 
+	'preload= 'metadata'' : Para carregar o audio antes. 
+	'autoplay' : Para reproduzir o aúdio automáticamente.
+	'controls' : Para aparecer os controles de aúdio.
+	'loop' : Para o audio reproduzir em loop.
+
+	Os parametros em <source>:
+	'src' : Para carregar o arquivo de audio.
+	'type' : Para o formato de aúdio. 
+	Neste caso o MP3 é: 'type= audio/mpeg'
+
+
+
+VIDEOS LOCALMENTE EM HTML5
+
+<video> : Para adicionar videos.
+
+<source-src> : Para adicionar videos com formatos diferentes.
+
+	ex.:
+    <video controls width="500" poster="imagens/thumb.jpg">
+
+        <source src="midia/meu-video.mp4" type="video/mp4">
+
+        <source src="midia/meu-video.webm" type="video/webm">
+
+        <source src="midia/meu-video.ogv" type="video/ogg">
+    </video>
+
+	Na Tag <video>:
+	'controls' é para adicionar o player.
+	'width' é para a largura do video.
+	'poster' é para adicionar uma tumb.
+
+	Na tag <source>:
+	'src' local do arquivo de video.
+	'type' tipo de formato do video. Isso varia tipo:
+		'video/mp4' : Para MP4;
+		'video/webm' : Para webm;
+		'video/ogg' : Para ogv.
+
+
+VIDEOS EXTERNOS(YouTube) HTML5
+
+É só ir no YouTube e clicar em 'COMPARTILHAR'. Vai aparecer
+'INCORPOPRAR <>' é só copiar o código e colar no seu site.
+
+ex.: 
+<h2>Inserindo videos do youtube.</h2>
+    <iframe width="500" height="280" src=
+    "https://www.youtube.com/embed/6DOngHCzyMU?si=rcApT6-0jWKa
+    DIvy" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture; 
+    web-share" referrerpolicy="strict-origin-when-cross-
+    origin" allowfullscreen>
+    </iframe>
+
+Basta fazer isso no seu código que o video vai ser inserido no
+site. Da pra mudar varios parametros como 'width' e 'heigth'.
+
+
+MENU
+
+<nav>: Cria um menu de navegação.
+
+	ex.: <nav>
+            	<a href="#">link</a>
+            	<a href="#">link</a>
+            	<a href="#">link</a>
+            	<a href="#">link</a>
+             </nav>
+
+	Vai criar um menu de navegação que direciona a locais ou
+	páginas do site.
+
+
+
+TABELAS
+
+<table> : Tabela(Table).
+
+<th> : Cabeçalho da Tabela(Table Header).
+
+<tr> : Linha da Tabela(Table Roll).
+
+<td> : Dado da Tabela(Table Data).
+
+	ex.: <table>
+        	<tr>
+            	<td> A1 </td>
+            	<td> B1 </td>
+            	<td> C1 </td>
+        	</tr>
+	     </table>
+
+	Inicialmente a tabela vai aparecer sem linhas separando.
+	Para isso basta adicionar 'border' com CSS.
+
+
+      * border-collapse : Para juntar as celulas da tabela, que 
+			  por padrão são separadas(separate).
+
+		ex.: border-collapse: collapse;
+
+		O parametro 'collapse' é o responsável por unir 
+		as celulas.
+
+
+      * vertical-align : Para alinhamento VERTICAL do conteudo de
+			 uma Tabela.
+
+		ex.: vertical-align: middle;
+
+		Por padrão o valor vem 'middle'(meio), mas também:
+			top: Cima;
+			middle: Meio;
+			bottom: Baixo.
+
+		OBS.: Para alinhamento HORIZONTAL use 'text-align'.
+
+
+TABELAS GRANDES (SEMÂNTICA DENTRO DA TABLE)
+
+<capition> : Legenda da Tabela.
+
+<thead> : Cabeça da tabela.
+	
+	<tr>: Linha.
+
+		<th> : Cabeçalho.
+
+<tbody> : Corpo da tabela.
+
+	<tr> : Linha.
+
+		<td> : Dado.
+
+<tfoot> : Pé da tabela.
+
+	<tr> : Linha.
+
+		<th> : Titulo do Pé.
+		<td> : Dado.
+ 
+ESCOPO DE TITULOS
+
+Quando falamos TITULOS queremos nos referir aos <th>, que pode
+ser o  TITULO da COLUNA(col), TITULO do GRUPO DE COLUNAS(colgroup), 
+       TITULO da LINHA(row) ou TITULO do GRUPO DE LINHAS(rowgroup).
+
+	ex.: 
+		<th scope="col">
+
+		<th scope="colgroup">
+
+		<th scope="row">
+
+		<th scope="rowgroup">
+
+	Para determinar o escopo do titulo basta observarmos qual
+	a função do mesmo. Se ele estiver como titulo de uma 
+	coluna provavelmente será 'col' e assim por diante.
+
+ESTILO ZEBRADO EM TABELAS
+
+tr:nth-child() : Esta pseudo-classe vai modificar linhas 
+		 especificas de acordo com o o valor dentro dos
+		 parenteses.
+
+	tr:nth-child(odd) : Para modificar as linhas IMPARES.
+	
+	tr:nth-child(even) : Para modificar as linhas PARES.
+
+	tr:nth-child(2n) : Para modificar uma linha sim outra não.
+
+
+	ex.:  tr:nth-child(odd) {
+            		background-color: gray;
+	      {
+
+	Vai tornar as linhas impares com fundo cinza.
+
+ 

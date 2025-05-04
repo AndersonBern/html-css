@@ -1,0 +1,39 @@
+Git & GitHub
+
+
+Git: Repositório Local.
+
+GitHub: Repositório Remoto.
+
+
+PARA HOSPEDAR PROJETOS E E GERAR UMA URL PARA O SEU SITE:
+
+* No GitHub desktop crie um novo repositório e cole os arquivos do
+seu site na pasta que o repositório criou no seu computador.
+
+* No GitHub.com abra seu repositório vá em 'settings' > 'Pages' e 
+clique em 'Branch' e selecione o seu terminal Git 'main'.
+
+* Agora vai ser gerado a URL 'github.io' para vc acessar sempre que
+vc quiser!
+
+OBS.: O GitHub Pages só funciona com HTML, CSS e JavaScript.
+
+
+
+COMO UTILIZAR SEUS REPOSITÓRIOS EM OUTROS PCs
+
+Necessário baixar: VScode, Github Desktop, GIT.
+
+Logar no Github Desktop.
+
+Crie uma pasta onde vc vai salvar seu repositório e clone seu 
+repositório para a pasta, e já estará tudo funcionando.
+
+(IMPORTANTE) Clique em 'file' > 'options' > 'git'. Depois clique
+no usuario e no email alternativo e depois em 'save', depois desses
+passos vc vai conseguir atualizar e dar 'commit' em tudo.
+
+Para sair sem deixar rastros basta clicar em 'file' > 'options' >
+'account' e dar logoff na sua conta e no mesmo local clique em 
+'git' e apague o seu nome de usuario e email e clique em 'save'.

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+    font-family: 'Sriracha';
+    
+}
+header {
+    font-family: 'Passion One';
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 50px;
+    margin: 0px;
+}
+h1 {
+    font-size: 2.5em;
+}
+header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin: auto;
+    padding: 0px;
+    line-height: normal;
+}
+h1 > strong {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+section#primeira {
+    background-image: url(imagens/background001.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section#segunda {
+    background-image: url(imagens/background002.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    background-color: white;
+    padding: 50px 0px 60px 0px;
+}
+.trans {
+    padding: 50px 10px 50px 10px;
+}
+.trans > p {
+    background-color: rgba(0, 0, 0, 0.329);
+    color: white;
+    text-align: justify;
+    width: 270px;
+    padding: 5px;
+    text-shadow: 2px 2px 2px black;
+}
+p {
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 50px;
+    padding: 0px 0px 40px 5px;
+    margin: 20px;
+}
+footer{
+    background-color: black;
+    color: white;
+}
+footer > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    line-height: normal;
+}
+@media (min-width: 600px) {
+    h1 {
+        font-size: 3.0em;
+    }
+    p {
+        font-size: 1.7em;
+        line-height: 60px;
+    }
+    .trans > p {
+        width: 320px;
+    }
+}
+@media (min-width: 750px) {
+    h1 {
+        font-size: 4.5em;
+    }
+    p {
+        font-size: 2em;
+        line-height: 75px;
+    }
+    .trans > p {
+        width: 400px;
+    }
+}
+
+@media (min-width: 900px) {
+    h1 {
+        font-size: 5.3em;
+    }
+    p {
+        font-size: 2.5em;
+        line-height: 85px;
+    }
+    .trans > p {
+        width: 500px;
+    }
+}
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 6em;
+    }
+    p {
+        font-size: 3em;
+        line-height: 100px;
+    }
+    .trans > p {
+        width: 600px;
+    }
+}

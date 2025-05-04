@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    background-color: #84E1AD;
+    margin: auto;
+    text-align: center;
+    font-family: tuffy;
+    font-weight: 500;
+}
+header{
+    background-image: linear-gradient(to bottom, #3CD883, #1A5C38);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+header > h1{
+    color: white;
+    text-align: center;
+    font-family: oswald;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.651);
+}
+header > p{
+    text-align: center;
+    text-indent: 0px;
+    font-weight: 600;
+}
+nav{
+    text-align: justify;
+}
+nav > a{
+    color: white;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 5px 5px 0 0;
+    margin: 0px;
+    font-weight: bold;
+
+}
+nav > a:hover{
+    background-color: #84e1ac81;
+}
+main{
+    background-color: white;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.705);
+    border-radius: 0px 0px 10px 10px;
+}
+p > a{
+    color: #1A5C38;
+    text-decoration: none;
+    font-weight: bold;
+}
+p > a:hover{
+    background-color: #84E1AD;
+    border-radius: 5px;
+}
+#extra{
+    background-color: #C5EBD6;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    text-align: justify;
+}
+footer{
+    background-color: #1A5C38;
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
+
+}
+#video{
+    background-color: #1A5C38;
+    padding: 10px;
+    outline: 10px solid #1A5C38;
+}
+h1, h2{
+    font-family: Idroid;
+    margin: 0px;
+    padding: 5px;
+    color: #1A5C38;
+    text-align: justify;
+}
+h3{
+    background-color: #2FA866;
+    border-radius: 10px 10px 0 0;
+}
+ul{
+    display: inline-block;
+    list-style-image: url(imagens/25404.png);
+}
+p{
+    text-indent: 30px;
+    text-align: justify;
+    padding: 5px;
+}
+abbr{
+    text-decoration: none;
+    font-weight: bold;
+}
+em{
+    color: #1A5C38;
+    font-weight: bold;
+}

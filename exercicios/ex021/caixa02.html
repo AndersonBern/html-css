@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            background-color: dimgray;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: gray;
+            padding: 3px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.616);
+        }
+        nav > a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        nav > a:hover{
+            background-color: rgb(37, 37, 37);
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        article{
+            background-color: lightgray;
+            padding: 5px;
+        }
+        article > aside{
+            background-color: rgb(107, 107, 107);
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+
+    </header>
+    <main>
+        <section>
+            <article id="conteudo">
+                <h2>Noticias sobre o Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam dolorum et aperiam maiores aut, dolorem labore iste, sequi nesciunt explicabo eum corporis libero iure ducimus mollitia nisi! Error, nam debitis.</p>
+
+            </article>
+            <article>
+                <aside>Artigo escrito por José da Silva</aside>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <p>Site criado pelo CursoEmVideo</p>
+
+    </footer>
+
+    
+</body>
+</html>
