@@ -1,0 +1,164 @@
+TABELAS EM HTML E CSS
+
+
+<table> : Tabela(Table).
+
+	<capition> : Legenda da tabela.
+
+	<thead> : Cabeça da tabela.
+
+	<tbody> : Corpo da tabela.
+
+	<tfoot> : Pé da tabela.
+
+<th> : Cabeçalho da Tabela(Table Header).
+
+<tr> : Linha da Tabela(Table Roll).
+
+<td> : Dado da Tabela(Table Data).
+
+	ex.: <table>
+        	<tr>
+            	<td> A1 </td>
+            	<td> B1 </td>
+            	<td> C1 </td>
+        	</tr>
+	     </table>
+
+	Inicialmente a tabela vai aparecer sem linhas separando.
+	Para isso basta adicionar 'border' com CSS.
+
+
+      * border-collapse : Para juntar as celulas da tabela, que 
+			  por padrão são separadas(separate).
+
+		ex.: border-collapse: collapse;
+
+		O parametro 'collapse' é o responsável por unir 
+		as celulas.
+
+
+      * vertical-align : Para alinhamento VERTICAL do conteudo de
+			 uma Tabela.
+
+		ex.: vertical-align: middle;
+
+		Por padrão o valor vem 'middle'(meio), mas também:
+			top: Cima;
+			middle: Meio;
+			bottom: Baixo.
+
+		OBS.: Para alinhamento HORIZONTAL use 'text-align'.
+
+
+TABELAS GRANDES (SEMÂNTICA DENTRO DA TABLE)
+
+<capition> : Legenda da Tabela.
+
+<thead> : Cabeça da tabela.
+	
+	<tr>: Linha.
+
+		<th> : Cabeçalho.
+
+<tbody> : Corpo da tabela.
+
+	<tr> : Linha.
+
+		<td> : Dado.
+
+<tfoot> : Pé da tabela.
+
+	<tr> : Linha.
+
+		<th> : Titulo do Pé.
+		<td> : Dado.
+ 
+ESCOPO DE TITULOS
+
+Quando falamos TITULOS queremos nos referir aos <th>, que pode
+ser o  TITULO da COLUNA(col), TITULO do GRUPO DE COLUNAS(colgroup), 
+       TITULO da LINHA(row) ou TITULO do GRUPO DE LINHAS(rowgroup).
+
+	ex.: 
+		<th scope="col">
+
+		<th scope="colgroup">
+
+		<th scope="row">
+
+		<th scope="rowgroup">
+
+	Para determinar o escopo do titulo basta observarmos qual
+	a função do mesmo. Se ele estiver como titulo de uma 
+	coluna provavelmente será 'col' e assim por diante.
+
+ESTILO ZEBRADO EM TABELAS
+
+tr:nth-child() : Esta pseudo-classe vai modificar linhas 
+		 especificas de acordo com o o valor dentro dos
+		 parenteses.
+
+	tr:nth-child(odd) : Para modificar as linhas IMPARES.
+	
+	tr:nth-child(even) : Para modificar as linhas PARES.
+
+	tr:nth-child(2n) : Para modificar uma linha sim outra não.
+
+
+	ex.:  tr:nth-child(odd) {
+            		background-color: gray;
+	      {
+
+	Vai tornar as linhas impares com fundo cinza.
+
+
+PARA DEIXAR O CABEÇALHO FIXO
+
+position: relative; : Para tornar a posição do elemento PAI(table),
+		      relativa e possibilitar a mudança de 
+		      'position' do FILHO.
+
+position: sticky; : Para fixar o elemento.
+
+top: -1px; : No topo da página.
+
+	ex.: thead > tr > th {
+            	position: sticky;
+            	top: -1px;
+            	background-color:  rgb(65, 64, 64);
+	     {
+
+	Vai tornar os <th>(table header) 
+
+	fixo(position: sticky;).]
+
+	No topo(top: -1px;).
+
+	E o fundo(Backgroud-color) deve ter a cor igual ao fundo
+	original para que este fundo se mova.
+
+	LEMBRANDO... A <table> deve ter a posição RELATIVA, para
+	que o restante da tabela possa ter a position alterada.
+
+
+MESCLAGEM DE CÉLULAS
+
+<td colspan=''> : Para expansão de COLUNA.
+
+<td rowspan=''> : Para expansão de LINHA.
+
+OBS.:   EXPANSÃO DE COLUNA é para ocupar a coluna ao LADO;
+	EXPANSÃO DE LINHA é para ocupar a linha a BAIXO.
+
+	ex.: <tr>
+            	<td colspan="2">A</td>
+
+            	<td rowspan="2">B</td>
+             </tr>
+
+	A primeira <td> vai ter uma expansão de 2 COLUNAS.
+
+	A segunda <td> vai ter uma expansão de 2 LINHAS.
+
+ 
