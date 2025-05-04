@@ -187,4 +187,22 @@ Para fazer com que uma unica <col> selecione mais colunas utilize:
 	Assim a <col> irá selecionar ela e a próxima. Ou mais, 
 	caso aumente o valor de 'span'.
 
+
+TABELA RESPONSIVA
+
+Selecione toda a sua <table> a usando CTRL+SHIFT+P envelope em uma
+<div>.
+
+Depois basta utilizar no CSS:
+
+overflow-x: auto; : Para adicionar uma barra de rolagem somente na
+		    tabela e o conteudo continuar estatico.
+
+	ex.: div.container {
+            	overflow-x: auto;
+             }
+
+	O 'x' do 'overflow' que dizer o eixo X(Horizontal), que 
+	no caso é para onde queremos adicionar a barra de rolagem.
+
  
