@@ -574,4 +574,6 @@ tr:nth-child() : Esta pseudo-classe vai modificar linhas
 
 	Vai tornar as linhas impares com fundo cinza.
 
+
+
  
