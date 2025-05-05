@@ -503,7 +503,58 @@ a width e height manualmente basta colocar os parametros.
 	OBS.: Caso altere o width e height no CSS, estas 
 	configurações não valerão. O CSS SEMPRE IRÁ SOBREPOR.
 
-	existe também o parametro 'scolling' que altera a barra
+	Existe também o parametro 'scolling' que altera a barra
 	de rolagem, nele pode ser 'yes' ou 'no', ou por padrão
 	'auto'. Porém não funciona em todos os navegadores.
+
+Para centralizar um iframe é necessário usar o 'display: block'
+para transforma-lo em bloco(pois é INLINE) e dar um 'margin: auto'.
+
+	ex.: iframe {
+            	display: block;
+            	margin: auto;
+             }
+
+
+NAVEGAÇÃO NO IFRAME
+
+Para navegar em sites internos/externos usando iframe basta 
+colocar o parametro 'name' no <iframe>.
+E com links<a> usando o parametro 'target='name'' O link será
+mostrado dentro do <iframe>.
+
+name='' : Para dar um nome ao iframe.(neste caso)
+
+target='name' : Para mostrar o link dentro do <iframe>.
+
+	ex.: <li>
+		<a href="paginas-extras/pag001.html" 
+		target="frame">Primeira página</a></li>
+             <li>
+		<a href="paginas-extras/pag002.html"
+		target="frame">Segunda página</a></li>
+
+	     <iframe src="" name="frame"></iframe>
+
+	Com isso quando clicar no link<a> o conteúdo do link será
+	mostrado dentro do <iframe> por causa do parametro 'name'.
+
+
+Para adicionar conteúdo no quadro do iframe vazio
+
+Dentro da tag <iframe> use o parametro 'srcdoc' que vai permitir 
+que façamos código de HTML dentro do quadro do iframe. Para 
+mostrar uma mensagem ou uma imagem, etc...
+
+srcdoc='' : Para adicionar tags de HTML dentro do quadro do iframe.
+
+	ex.: <iframe srcdoc="<h1>Escolha uma das opções a 
+	     cima.</h1><img src='imagens/github-m.png'>" >
+		
+	     </iframe>
+
+	Desta forma adicionamos um titulo<h1> e uma imagem<img>
+	dentro do quadro do iframe.
+
+ 
 
