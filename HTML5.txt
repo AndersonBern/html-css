@@ -468,3 +468,42 @@ MENU
 	páginas do site.
 
 
+
+IFRAME
+
+Quadro em linha(Frame in-line).
+
+<iframe> : é um quadro que mostra o conteúdo de um site/pagina 
+	   inline.
+
+	ex.: <iframe src="https://gustavoguanabara.github.io"
+	     frameborder="0"> 
+
+		<a href="https://gustavoguanabara.github.io">
+		Github.</a>
+
+             </iframe>
+
+	Dentro do iframe vem 2 parametros:
+
+	src = Link.
+	frameborder = borda do quadro. 0: sem borda 1: com borda.
+
+	É recomendavel colocar um <a> dentro do <iframe> porque
+	alguns dispositivos não tem suporte para o iframe, e no 
+	lugar vai aparecer um link para a pagina.
+
+O tamanho padrão do <iframe> é de 300x150. Mas podemos configurar
+a width e height manualmente basta colocar os parametros.
+
+	ex.: <iframe src="https://gustavoguanabara.github.io" 
+	     frameborder="0" width="300" height="300"> 
+	     </iframe>
+
+	OBS.: Caso altere o width e height no CSS, estas 
+	configurações não valerão. O CSS SEMPRE IRÁ SOBREPOR.
+
+	existe também o parametro 'scolling' que altera a barra
+	de rolagem, nele pode ser 'yes' ou 'no', ou por padrão
+	'auto'. Porém não funciona em todos os navegadores.
+
