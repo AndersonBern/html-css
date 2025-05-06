@@ -557,4 +557,29 @@ srcdoc='' : Para adicionar tags de HTML dentro do quadro do iframe.
 	dentro do quadro do iframe.
 
  
+SEGURANÇA EM IFRAMES
 
+Quando vc utiliza um iframe com um link externo você acaba 
+abrindo uma breixa de acesso para o outro site ao seu site.
+Para previnir isso usamos:
+
+sandbox='' : Vai bloquear varios tipos de acesso a informações
+	     do seu site.
+
+referrerpolicy='no-referrer' : Vai bloquer qualquer tipo de 
+			       acesso aos dados do seu site.
+ 			       Principalmente de usuários.
+
+	ex.:  <iframe src="paginas-extras/pag004.html" 
+	      sandbox="sandbox" referrerpolicy="no-referrer">
+
+	Neste caso o 'sandbox='sandbox'' bloqueia TODOS as 
+	permissões acesso ao seu site. Mas também existem:
+
+	allow-forms: Permitir formulários;
+	allow-same-origin: Permite arquivos da mesma origem;
+	allow-scripts: Permite scripts(códigos).
+	etc...
+
+
+	
