@@ -582,4 +582,73 @@ referrerpolicy='no-referrer' : Vai bloquer qualquer tipo de
 	etc...
 
 
+
+FORMULÁRIOS
+
+
+<form>: Para criar um formulário.
+
+<input>: Para criar um elemento de interação.
+
+	text: Caixa de texto.
+	password: Caixa de senha.
+	submit: Botão de envio.
+	reset: Botão de resetar dados.
+
+<label>: Para criar um rótulo, sempre ligado ao ID no input.
+
+	OBS.: O atributo 'name' é importante para o HTML, e o 'id'
+	      para <label> e JS.
+
+
+action='Arquivo.php' : Para enviar o formulário para um arquivo.
+
+	ex.: <form action="cadastro.php">
+        	<p><label for="inome">Nome:</label> 
+		<input type="text" name="nome" id="inome"></p>
+
+		<p><input type="submit" value="Enviar"></p>
+
+	     </form>
+
+
+method='get' : Para quando os dados não forem sensíveis.
+	       (até 3000 bites, cerca de 3000 caracteres.)
+
+method='post' : Para dados sensíveis. Envio de arquivos.
+		(Sem limitação.)
+
+	OBS.: NECESSÁRIO APRENDER SOBRE 'https' PARA PROTEÇÃO DE
+	      DADOS.
+
+required: Sempre que algum dado for OBRIGATÓRIO.
+
+minlength='' : Para determinar um numero minimo de caracteres.
+
+maxlength='' : Para determinar um numero máximo de caracteres.
+
+	ex.: <input type="text" name="usu" id="iusu" 
+	     required minlength="5" maxlength="15">
+
+	Vai criar um input tipo texto que sera obrigatório ser 
+	preenchido com min de 5 caracteres e max de 15 caracteres.
+
+size='' : Para auterar o tamanho da caixa do input.(N° de caractr)
+
+placeholder='' : Para escrever algo dentro da caixa. 
+		 Dicas, sujestões, etc...
+
+autocomplete='' : Para ativar ou desativar as sujestões.
+
+	No <form> só terão 'on' e 'off', mas se você desejar 
+	ativar, é mais interessante usar o 'autocomplete' 
+	especifico para cada <input>.
+
+	ex.: autocomplete = 'username' PARA NOME DE USUÁRIO.
+	     autocomplete = 'new-password' PARA NOVAS SENHAS.
+	     autocomplete = 'current-password' PARA SENHAS SALVAS.
+	     etc...
+
+	OBS.: PARA ISSO É NECESSÁRIO DEIXAR ATIVO(on) NO <form>,
+	      E USAR UM ESPECIFICO EM CADA <input>.
 	
