@@ -33,6 +33,7 @@ display: inline-block; : COLOCA UM BLOCO NA MESMA LINHA.
 box-shadow: SOMBRA.
 	    Sequencia: dslc vertical, dslc horizontal, 
 	    espalhamento, sombra.
+box-sizing: border-box; : Para juntar a borda a caixa.
 
 text-decoration: none; : TIRA SUBLINHADO OU QUALQUER DECORAÇÃO.
 text-decoration: underline; : SUBLINHA O TEXTO.
@@ -650,6 +651,15 @@ transform: translate() : Para mudar o ponto de ancoragem da caixa.
 
 	E assim alinhando a box ao centro.
 
+
+PARA ESCONDER A BARRA DE ROLAGEM
+
+::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+ }
+
+Vai esconder a barra de rolagem de uma tela.
 	
 	
 
