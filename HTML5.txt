@@ -595,6 +595,8 @@ FORMULÁRIOS
 	month: Caixa para mês.(mês/ano)
 	date: Caixa para data.(dia/mês/ano)
 	time: Caixa para hora.
+	email: Caixa de E-mail.
+	tel: Caixa de telefone.
 	submit: Botão de envio.
 	reset: Botão de resetar dados.
 	
@@ -603,6 +605,10 @@ FORMULÁRIOS
 
 	OBS.: O atributo 'name' é importante para o HTML, e o 'id'
 	      para <label> e JS.
+
+<fieldset> : Para agrupar um grupo de campos.
+
+<legend> : Para adicionar uma legenda ao grupo de campos.
 
 
 action='Arquivo.php' : Para enviar o formulário para um arquivo.
@@ -681,4 +687,27 @@ value='' : Para PREENCHER o input com um valor sugerido.
 
 	Vai escrever o mês e o ano(maio de 2025), e se o usuário
 	quiser pode alterar.
+
+
+RegEx(Regular Expressions)
+
+pattern='^$' : Pra criar uma RegEx. As expressões vão entre ^ e $.
+
+^ : Para abrir.
+$ : Para fechar.
+\d{} : Quantidade de digitos(dentro das chaves).
+\( : Abrir parenteses.
+\) : Fechar parenteses.
+
+	ex.: <input type="tel" name="tel" id="itel" 
+	     pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
+
+	No 'pattern' Quer dizer que o valor do input terá que ser:
+
+		* 2 digitos entre parenteses(  \(\d{2}\)  );
+		* Entre 4 e 5 digitos(  \d{4,5}  );
+		* Um traço( - );
+		* 4 digitos(  \d{4}  ).
+
+	Servem como requisitos de validação em um input. 
 	
