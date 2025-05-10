@@ -599,6 +599,11 @@ FORMULÁRIOS
 	tel: Caixa de telefone.
 	submit: Botão de envio.
 	reset: Botão de resetar dados.
+	checkbox: Uma caixa para marcar.
+	radio: Um circulo para marcar.
+	color: Caixa de cor.
+	range: Barra de nivel.
+	file: Carregar um arquivo.
 	
 
 <label>: Para criar um rótulo, sempre ligado ao ID no input.
@@ -711,3 +716,71 @@ $ : Para fechar.
 
 	Servem como requisitos de validação em um input. 
 	
+
+Checkbox
+
+ex.: <label for="iesfut"><input type="checkbox" name="esfut" 
+     id="iesfut"> Futebol</label>
+
+	Vai criar uma caixinha para marcar(V).
+	Repare que o label fica FORA do input.
+
+Radio
+
+ex.: <input type="radio" name="sexo" id="isxmas" value='M'> 
+     <label for="isxmas">Masculino</label>
+
+     <input type="radio" name="sexo" id="isxfem" value='F'> 
+     <label for="isxfem">Feminino</label>
+
+	Vai criar 2 caixas de opções, é ideal que o 'name' 
+	SEJA IGUAL já que são opções e não apenas marcações.
+	Fazendo isto irá ser possivel marcar apenas 1 das opções.
+
+	Repare que o label fica FORA do input.
+
+	'value' é o valor que este botão irá retornar.
+
+
+checked: Para quando vc quiser que uma opção já seja marcada.
+
+
+Color
+
+ex.: <input type="color" name="cor" id="icor">
+
+	Vai criar uma caixa para o usuario escolher uma cor.
+
+	Se quiser que já inicie em uma cor especifica basta usar
+	value='Código Hexa-decimal'.
+
+		ex.: <input type="color" id="icor" value="#00ff00" 
+
+
+Range
+
+ex.: <input type="range" name="nivel" id="inivel">
+
+	Vai criar uma barrinha que por padrão vai de 0 a 100.
+	Para alterar isto basta utilizar: min e max.
+
+		ex.: <input type="range" name="nivel" 
+		     id="inivel" min="1" max="5">
+
+	Assim a barra só terá 5 niveis.
+
+	Se quiser que já inicie em uma cor especifica basta usar
+	value='Nivel desejado'.
+
+		ex.: <input type="range" name="nivel" id="inivel"
+		      min="1" max="5" value="2">
+
+
+File
+
+ex.: <input type="file" name="foto" id="ifoto">
+
+	Vai criar uma caixa que pede uma foto(Foto de perfil).
+
+	OBS.: Só vai funcionar com o formulário 'post' por causa 
+	da limitação de 3000 bytes.
