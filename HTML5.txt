@@ -784,3 +784,64 @@ ex.: <input type="file" name="foto" id="ifoto">
 
 	OBS.: Só vai funcionar com o formulário 'post' por causa 
 	da limitação de 3000 bytes.
+
+
+
+
+SELECT, DATALIST e TEXTAREA
+
+
+<select>: Para criar uma lista(CAIXA de SELEÇÃO) com opções.
+
+<option>: Opção. Vai dentro das listas de opções e sujestões.
+
+<optgroup>: Para agrupar opções.
+
+	ex.: <select name="estado" id="iest">
+                <optgroup label="Região Sudeste">
+                    <option value="SP" selected>São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+	     </select>
+
+	Cria uma caixa de seleção(select) com algumas opções. E 
+	este grupo de opções(optgroup) rotulado(label) de 'Região
+	Sudeste'. 
+
+	selected: Para já vim selecionada uma opção.
+
+<datalist>: Cria uma caixa com uma lista de sujestões.
+
+	Para utilizar esta 'lista de sujestão' é nescessário um
+	ID para que o input possa chama-lo como atributo 'list=id'
+
+	ex.: <input type="text" id="iprof" list="listaprof">
+
+            <datalist id="listaprof">
+                <option>Adiministrador</option>
+                <option>Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist>
+
+	É necessário chamar a lista de sujestões com 'list'. Que
+	vai busca-lo pelo ID.
+
+<textarea>: Para criar uma área para escrever uma mensagem.
+
+	ex.: <textarea name="msg" id="imsg" cols="30" rows="10"
+	     placeholder="Sua mensagem aqui!" maxlength='100'>
+	     </textarea>
+
+	Atributos:
+		cols: Colunas;
+		rows: Linhas;
+		palceholder: Mensagem...;
+		maxlength: Para limitar o numero de caracteres.
+
+	Para que o usuário não possa redimencionar a área utilize:
+	
+		<style> 'resize: none;'
+
+	
