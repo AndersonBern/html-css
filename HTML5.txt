@@ -467,6 +467,8 @@ MENU
 	Vai criar um menu de navegação que direciona a locais ou
 	páginas do site.
 
+<menu>: Para menus de contexto, sem navegação.
+
 
 
 IFRAME
@@ -875,4 +877,16 @@ oninput : Quando o usuário digitar algo vai...
 
 	Depois destes comandos o output vai mostrar a soma de 
 	n1 + n2.
+
+OUTRO EXEMPLO:
+
+	ex.: <input type="range" name="num" id="inum"
+	     min="0" max="10" value="5" 
+	     oninput="ival.innerHTML= Number(inum.value)">
+             
+    	     <output id="ival">5</output>
+
+	Neste caso criou um 'input range' e para mostrar o valor 
+	que esta sendo selecionado no range utiliza o 'output'.
+	
 
