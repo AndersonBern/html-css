@@ -585,6 +585,8 @@ referrerpolicy='no-referrer' : Vai bloquer qualquer tipo de
 
 FORMULÁRIOS
 
+NAME: Para 
+
 
 <form>: Para criar um formulário.
 
@@ -604,6 +606,7 @@ FORMULÁRIOS
 	color: Caixa de cor.
 	range: Barra de nivel.
 	file: Carregar um arquivo.
+	number: Caixa para NUMERO.
 	
 
 <label>: Para criar um rótulo, sempre ligado ao ID no input.
@@ -845,3 +848,31 @@ SELECT, DATALIST e TEXTAREA
 		<style> 'resize: none;'
 
 	
+
+OUTPUT
+
+<output> : Cria um espaço para mostrar algo.
+	   (Não envia nada, só mostra)
+
+oninput : Quando o usuário digitar algo vai...
+
+	ex.:  <input type="number" name="n1" id="in1" 
+	      min="0" max="50" required 
+	      oninput="isoma.innerHTML = 
+	      Number(in1.value) + Number(in2.value)">
+
+	      <input type="number" name="n2" id="in2" 
+	      min="0" max="50" required 
+	      oninput="isoma.innerHTML = 
+	      Number(in1.value) + Number(in2.value)">
+
+	     <label for="isoma">Soma: </label>
+              <output id="isoma">0</output>
+
+	Dentro do 'oninput' vai código JS. Neste caso:
+	Vai vai adicionar ao output(isoma.innerHTML) o valor de
+	n1 + n2 (Number(in1.value) + Number(in2.value))
+
+	Depois destes comandos o output vai mostrar a soma de 
+	n1 + n2.
+
