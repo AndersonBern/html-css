@@ -663,4 +663,42 @@ Vai esconder a barra de rolagem de uma tela.
 	
 	
 
+MEDIA QUERIES
+
+Media query serve para alterar o estilo em casos diferentes. Seja
+em tamanho de telas diferentes, impressoras e etc...
+Media query = media types + media features
+
+
+media='' : (ATRIBUTO dentro da tag <link:CSS>) 
+	   Para diferenciar os diferentes tipos de media.
+
+
+Media types 
+	
+	all: Para todos os tipos;
+	screen: Para telas;
+	print: Para impressoras;
+
+	       ex.: <link rel="stylesheet" href="estilos/tela.css" 
+	     	     media="screen">
+
+	   Neste caso criou um arquivo css com 'media' para telas.
+
+Media features
+
+São informadas dentro do atributo 'media' porém entre parenteses.
+
+	(orientation: portrait): Para telas em modo retrato.
+	(orientation: landscape): Para telas em modo paisagem.
+
+	ex.: <link rel="stylesheet" href="estilo/retrato.css" 
+	     media="screen and (orientation: portrait)">
+
+	REPARE QUE o media tem o type 'screen' AND a feature 
+	'orientation'. É necessário sempre colocar o 'and' dentro
+	do atributo media.
+
+	Caso vc tenha mais de 1 feature, terá que adicionar outro
+	'and' e a feature dentro de parenteses.
 
