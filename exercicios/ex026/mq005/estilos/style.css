@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
+body, html {
     height: 100vh;
 } 
 
@@ -14,7 +14,6 @@ body {
 
 header {
     background-color: gray;
-    padding-bottom: 5px;
 }
 
 header h1 {
@@ -22,28 +21,32 @@ header h1 {
     padding: 10px;
 }
 
-div {
+#hamburguer {
+    display: block;
     background-color: rgb(66, 66, 66);
-    padding: 5px;
+    color: white;
     text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#hamburguer:hover {
+    background-color: white;
+    color: black;
 }
 
 nav {
     display: none;
 }
-
 nav a {
     display: block;
     background-color: rgb(90, 90, 90);
     color: white;
     padding: 10px;
-    text-decoration: none;
-}
-
-div:hover {
-    nav {
-        display: block;
-    }
+    text-decoration: none; 
+    text-align: center;
+    font-weight: bold;
+    border-top: 2px solid gray;
 }
 
 nav a:hover {
@@ -59,7 +62,10 @@ main {
     border-radius: 10px;
 }
 
-main > p {
+article h2 {
+    padding-bottom: 10px;
+}
+article > p {
     text-indent: 30px;
-    padding: 10px;
+    padding-bottom: 10px;
 }

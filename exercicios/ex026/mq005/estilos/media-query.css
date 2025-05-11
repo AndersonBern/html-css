@@ -1,9 +1,18 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
     main {
         width: 600px;
     }
 
+    header p {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
     nav a {
+        display: inline-block;
         background-color: rgb(90, 90, 90);
         color: white;
         text-decoration: none;

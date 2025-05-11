@@ -41,6 +41,9 @@ text-decoration: underline; : SUBLINHA O TEXTO.
 font-variant: small-caps; : TORNA TODAS AS LETRAS MAIÚSCULAS,
 			    MAS A 1a LETRA FICA MAIOR.
 
+cursor: pointer; : Para fazer com que o cursor vire na mãozinha de
+		   click.
+
 
 PARA FAZER COM QUE AS LETRAS SE AJUSTEM A TELA:
 
@@ -752,3 +755,26 @@ ex.: @media screen and (min-width: 768px) and (max-width: 992px) {
 	}
 
 
+
+PARA ALTERAR O ESTILO COM JS
+
+Passo 1: Dentro de uma tag, chame uma função com um evento. 
+
+	ex.: 'onclick= função()'
+
+
+Passo 2: A tag terá que ter um ID. ex.: 'itens'
+
+	ex.: <span id="itens" onclick= "função()"></span>
+
+
+Passo 3: Já no script, após o ID use: 
+
+	.style.ItemDesejado = 'alteração'
+
+
+EX.: função() {
+	itens.style.display = 'block'
+     }
+
+Assim ALTERANDO o valor de 'display' para 'block'.
