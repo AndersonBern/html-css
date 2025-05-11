@@ -44,6 +44,14 @@ font-variant: small-caps; : TORNA TODAS AS LETRAS MAIÚSCULAS,
 cursor: pointer; : Para fazer com que o cursor vire na mãozinha de
 		   click.
 
+!important; : PARA FORÇAR QUE UMA CONFIGURAÇÃO SEJA EXECUTADA.
+
+	ex.: nav {
+        	display: block !important;
+    	     }
+	Desta forma o 'nav' vai aparecer na tela(display: block), 
+	independente do que aconteça antes.
+
 
 PARA FAZER COM QUE AS LETRAS SE AJUSTEM A TELA:
 
