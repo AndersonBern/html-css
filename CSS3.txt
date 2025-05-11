@@ -702,3 +702,20 @@ São informadas dentro do atributo 'media' porém entre parenteses.
 	Caso vc tenha mais de 1 feature, terá que adicionar outro
 	'and' e a feature dentro de parenteses.
 
+
+
+PARA FAZER MEDIA QUERIES DIRETO NO CSS
+
+@media : Vai criar estilos especificos dentro do proprio CSS.
+
+
+	ex.: @media screen and (orientation: portrait) {
+            	body {
+                	background-image: url(imagem.jpg);
+               	}
+            }
+
+	REPARE QUE da mesma forma que DECLARANDO dentro do 
+	link:CSS, temos que declarar as 'media type' e 
+	'media features'.
+	
