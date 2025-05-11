@@ -718,4 +718,37 @@ PARA FAZER MEDIA QUERIES DIRETO NO CSS
 	REPARE QUE da mesma forma que DECLARANDO dentro do 
 	link:CSS, temos que declarar as 'media type' e 
 	'media features'.
+
+
+MOBILE FIRST
+
+O método Mobile First consiste em priorizar a experiência do 
+usuário em dispositivos móveis ao desenvolver websites, 
+aplicativos e outros produtos digitais.
+
+Desenvolvendo os estilos de acordo com o Mobile PRIMEIRO.
+Depois desenvolvemos estilos para o restante do dispositivos.
+
+Typical devices breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: 1200px pra cima.
 	
+
+Como no método Mobile First já criamos o site baseados em telas de 
+celulares. As MEDIAS QUERIES serão apartir de telas da largura de 
+TABLET até as GRANDES TELAS.
+
+ex.: @media screen and (min-width: 768px) and (max-width: 992px) {
+	}
+
+     @media screen and (min-width: 992px) and (max-width: 1200px) {
+	}
+
+     @media screen and (min-width: 1200px) {
+	}
+
+
