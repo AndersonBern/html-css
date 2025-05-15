@@ -1,0 +1,125 @@
+FLEXBOX(Flexible Box Module)
+
+
+Qual o formato da água ? DEPENDE DO RECIPIENTE(container)!
+
+Flexbox é o 'Recipiente' e a 'água' são os elementos filhos.
+
+
+
+display: flex; : Para denominar um container em FLEXBOX.
+
+flex: auto; : Para fazer com que os filhos se adaptem a 100% da 
+	      area do PAI(display flex).
+
+	ex.: .container {
+			display: flex;
+		}
+
+	     .item { 
+			flex: auto;
+		}
+
+	Assim vai ser criado uma FLEXBOX(container) e os 
+	item(filho) vai ser 100% adaptável a area do pai.
+
+
+flex-direction: ; : Vai ser a direção em que os elementos filhos
+		    vão se organizar na flexbox.
+
+
+main-axis: Eixo principal. Pode variar com a 
+	    direção(flex-direction).
+
+	main-start: Inicio do eixo MAIN.
+	main-end: Fim do eixo MAIN.
+
+
+cross-axis: Eixo oposto ao main. EX.: Se o MAIN for VERTICAL, o 
+	    cross será HORIZONTAL.
+
+	cross-start: Inicio do eixo CROSS.
+	cross-end: Fim do eixo CROSS.
+
+
+
+     * flex-direction: row; : EM LINHA, da esquerda para direita.
+		
+		main-start: Lado ESQUERDO.
+		main-end: Lado DIREITO.
+
+		cross-start: CIMA.
+		cross-end: BAIXO.
+
+	OBS.: Tipo eixo X(main) e eixo Y(cross).
+
+
+     * flex-direction: row-reverse; : EM LINHA, da direita para 
+				      esquerda.
+
+		main-start: Lado DIREITO.
+		main-end: Lado ESQUERDO.
+
+		cross-start: CIMA.
+		cross-end: BAIXO.
+
+	OBS.: Tipo eixo X invertido(main) e eixo Y normal(cross).
+
+
+     * flex-direction: column; : EM COLUNA, de cima para baixo.
+
+		main-start: CIMA.
+		main-end: BAIXO.
+
+		cross-start: Lado ESQUERDO.
+		cross-end: Lado DIREITO.
+
+		OBS.: Tipo eixo Y(main) e eixo X(cross).
+
+
+     * flex-direction: colunm-reverse; : EM COLUNA, de baixo para
+					 cima. 
+
+		main-start: BAIXO.
+		main-end: CIMA.
+
+		cross-start: Lado ESQUERDO.
+		cross-end: Lado DIREITO.
+
+	OBS.: Tipo eixo Y invertido(main) e eixo X normal(cross).
+
+
+
+flex-wrap: Para denominar a quebra de linha dos elementos filhos
+	   de um Flexbox.
+
+	* flex-wrap: nowrap; : Vai impedir que os elementos filhos
+			       quebrem a linha quando a largura
+			       da tela for menor que o espaço que
+			       eles ocupam. Fazendo com que eles 
+			       encolham junto da largura da tela.
+			  
+			      SOMENTE ATÉ O TAMANHO DO CONTEÚDO. 
+
+	* flex-wrap: wrap; : Vai quebrar a linha assim que a
+			     largura da tela for menor que o 
+			     espaço em que eles ocupam. Impedindo
+			     que eles encolham junto da largura 
+			     tela.
+
+			     SEMPRE NO SENTIDO do cross-axis.
+
+	* flex-wrap : wrap-reverse; :
+				Vai fazer exatamente o mesmo que
+				no 'flex-wrap: wrap;', porém no
+				sentido contrário ao cross-axis.
+
+
+
+
+flex-flow: ShortHand para o flex-direction e flex-wrap.
+
+	ex.:  flex-flow: row  nowrap;
+
+	Vai fazer com que os elementos filho tenha direction: row
+	(linha) e wrap: nowrap(sem quebra de linha).
