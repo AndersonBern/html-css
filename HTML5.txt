@@ -587,8 +587,6 @@ referrerpolicy='no-referrer' : Vai bloquer qualquer tipo de
 
 FORMULÁRIOS
 
-NAME: Para 
-
 
 <form>: Para criar um formulário.
 

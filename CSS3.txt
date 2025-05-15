@@ -1,5 +1,14 @@
 CSS3
 
+PARA ICONS
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+
+<span class="material-icons">face</span>
+
+
+
 COMANDOS:
 
 height: ALTURA.
@@ -43,6 +52,10 @@ font-variant: small-caps; : TORNA TODAS AS LETRAS MAIÚSCULAS,
 
 cursor: pointer; : Para fazer com que o cursor vire na mãozinha de
 		   click.
+
+overflow: hidden; : PAR QUE TUDO QUE VÁ ALÉM DA BORDA NÃO APAREÇA.
+
+float: PARA FAZER O ELEMENTO FLUTUAR EM UMA DIREÇÃO(left, right).
 
 !important; : PARA FORÇAR QUE UMA CONFIGURAÇÃO SEJA EXECUTADA.
 
@@ -786,3 +799,17 @@ EX.: função() {
      }
 
 Assim ALTERANDO o valor de 'display' para 'block'.
+
+
+
+TRANSITION
+
+transition: Pode ser usado para qualquer atributo em CSS, quando
+	    necessário uma transição.
+
+	ex.: transition: width .3s;
+
+	Vai fazer uma transição quando o elemento mudar de 
+	largura(ideal para media-queries).
+
+transition-timing-function: ease; : Para suavisar a transição.
