@@ -35,7 +35,7 @@ main-axis: Eixo principal. Pode variar com a
 	main-end: Fim do eixo MAIN.
 
 
-cross-axis: Eixo oposto ao main. EX.: Se o MAIN for VERTICAL, o 
+cross-axis: Eixo transversal. EX.: Se o MAIN for VERTICAL, o 
 	    cross será HORIZONTAL.
 
 	cross-start: Inicio do eixo CROSS.
@@ -123,3 +123,66 @@ flex-flow: ShortHand para o flex-direction e flex-wrap.
 
 	Vai fazer com que os elementos filho tenha direction: row
 	(linha) e wrap: nowrap(sem quebra de linha).
+
+
+
+JUSTIFY-COONTENT
+
+justify-content: Vai alinhar o conteúdo de acordo com o main-axis.
+		
+
+	* justify-content: flex-start; :
+		Vai alinhar todo o conteúdo
+		da flexbox no inicio do main-axis(main-start),
+		e todo espaço que sobrar sempre ficará no fim do
+		main-axis(main-end).
+
+	* justify-content: flex-end; :
+		Vai alinhar todo o conteúdo no fim do main-axis
+		(main-end) e todo espaço que sobrar ficará no 
+		inicio do main-axis(main-start).
+
+	* justify-content: center; : 
+		Vai alinhar todo o conteúdo no centro do main-axis.
+
+	* justify-content: space-between; :
+		Vai colocar o primeiro item grudado no main-start
+		e o ultimo item grudado no main-end, e distribuir
+		o espaço entre eles POR IGUAL.
+
+	* justify-content: space-evenly; :
+		Vai distribuir os espaços entre os elementos de
+		forma IGUAL, incluindo um espaço antes do primero
+		elemento e depois do ultimo elemento.
+
+	* justify-content: space-around; :
+		Vai dividir o espaço dentro da flexbox de acordo
+		com o numero de elementos, e centralizar eles
+		dentro destas divisões.
+
+			ex.: Se existem 3 elementos, o 
+			     space-around vai dividir o espaço
+			     disponível em 3 espaços separados e
+			     centralizar cada elemento em um 
+			     desses espaços.
+
+
+
+ALIGN-ITEMS
+
+align-items: Vai alinhar o conteúdo de acordo com o cross-axis.
+
+	* align-items: stretch; : Estica os elementos.(padrão)
+
+	* align-items: flex-start: Alinha os itens no inicio do 
+			cross-axis(cross-start). E todo espaço 
+			que sobrar ficará no final do 
+			cross-axis(cross-end).
+
+	* align-items: flex-end: Alinha os itens no final do 
+			cross-axis(cross-end). E todo espaço 
+			que sobrar ficará no inicio do 
+			cross-axis(cross-start).
+
+	* align-items: center; : Vai alinhar todos os itens no 
+				 centro do cross-axis.
