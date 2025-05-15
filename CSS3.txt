@@ -813,3 +813,17 @@ transition: Pode ser usado para qualquer atributo em CSS, quando
 	largura(ideal para media-queries).
 
 transition-timing-function: ease; : Para suavisar a transição.
+
+
+FLEXBOX(Flexible Box Module)
+
+
+Qual o formato da água ? DEPENDE DO RECIPIENTE(container)!
+
+Flexbox é o 'Recipiente' e a 'água' são os elementos filhos.
+
+
+display: flex; : Para denominar um container em FLEXBOX.
+
+flex: auto; : Para fazer com que os filhos se adaptem ao PAI 
+	     (display flex).
