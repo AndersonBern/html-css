@@ -128,7 +128,7 @@ flex-flow: ShortHand para o flex-direction e flex-wrap.
 
 JUSTIFY-COONTENT
 
-justify-content: Vai alinhar o conteúdo de acordo com o main-axis.
+justify-content: Vai alinhar o conteúdo de acordo com o MAIN-AXIS.
 		
 
 	* justify-content: flex-start; :
@@ -168,7 +168,7 @@ justify-content: Vai alinhar o conteúdo de acordo com o main-axis.
 
 
 
-ALIGN-ITEMS
+ALIGN-ITEMS(nowrap)
 
 align-items: Vai alinhar o conteúdo de acordo com o cross-axis.
 
@@ -186,3 +186,62 @@ align-items: Vai alinhar o conteúdo de acordo com o cross-axis.
 
 	* align-items: center; : Vai alinhar todos os itens no 
 				 centro do cross-axis.
+
+
+CENTRALIZAÇÃO ABSOLUTA COM FLEXBOX(nowrap)
+
+ex.: display: flex;
+     flex-flow: row nowrap;
+     justify-content: center;
+     align-items: center;
+
+
+ALINHAMENTO DE ELEMENTOS EMPACOTADOS(wrap)
+
+ALIGN-CONTENT
+
+align-content: Para alinhar os elementos empacotados(wrap) de 
+	       acordo com o CROSS-AXIS.
+
+	* align-content: stretch; : Vai alinhar os itens e estica-
+				    los de acordo com o espaço
+				    disponivel.
+
+	* align-content: flex-start; : Vai alinhar os itens no 
+				       inicio do cross-axis
+				       (cross-start) e deixar 
+ 				       o espaço restante
+				       disponível no cross-end.
+
+	* align-content: flex-end; :  Vai alinhar os itens no 
+				       final do cross-axis
+				       (cross-end) e deixar 
+ 				       o espaço restante
+				       disponível no cross-start.
+
+	* align-content: center; : Vai alinhar os itens no centro
+				   do cross-axis.
+
+	* align-content: space-between; :
+		Vai colocar o primeiro item grudado no cross-start
+		e o ultimo item grudado no cross-end, e distribuir
+		o espaço entre eles POR IGUAL.
+
+	* align-content: space-evenly; :
+		Vai distribuir os espaços entre os elementos de
+		forma IGUAL, incluindo um espaço antes do primero
+		elemento e depois do ultimo elemento.
+
+	* align-content: space-around; :
+		Vai dividir o espaço dentro da flexbox de acordo
+		com o numero de elementos, e centralizar eles
+		dentro destas divisões.
+
+			ex.: Se existem 3 elementos, o 
+			     space-around vai dividir o espaço
+			     disponível em 3 espaços separados e
+			     centralizar cada elemento em um 
+			     desses espaços.
+
+				  
+
