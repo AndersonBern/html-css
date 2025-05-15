@@ -3,7 +3,7 @@ CSS3
 PARA ICONS
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
+      rel="stylesheet">
 
 <span class="material-icons">face</span>
 
