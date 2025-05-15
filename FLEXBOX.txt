@@ -245,3 +245,35 @@ align-content: Para alinhar os elementos empacotados(wrap) de
 
 				  
 
+AUTONOMIA DOS ITENS FLEXBOX(FILHOS)
+
+order :  Para alterar a ordem de um item dentro de uma flexbox.
+	 Cada elemento por padrão vem com 'order: 0', para
+	 que eles sejam mostrados na ordem do código HTML. Para 
+	 alterar a ordem basta dar valores 'order' aos itens, e
+	 eles serão exibidos em ordem crescente.
+
+	ex.: item1 {
+		order: 2;
+	     }
+
+	     item2 {
+		order: 1;
+	     }
+
+	Neste caso o item2 será exibido antes do item1, porque
+	seu 'order' é menor que o do item1.
+
+
+align-self : Vai alinhar o item de acordo com o CROSS-AXIS.
+
+	* auto: Vai herdar o alinhamento do pai(padrão);
+	
+	* flex-start: Vai alinhar de acordo com o CROSS-START;
+
+	* flex-end: Vai alinhar de acordo com o CRODD-END;
+
+	* center: Vai alinhar no centro do CROSS-AXIS;
+
+	* stretch: Vai esticar o item para ocupar todo o 
+		   CROSS-AXIS.
