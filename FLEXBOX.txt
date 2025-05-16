@@ -126,7 +126,7 @@ flex-flow: ShortHand para o flex-direction e flex-wrap.
 
 
 
-JUSTIFY-COONTENT
+JUSTIFY-CONTENT
 
 justify-content: Vai alinhar o conteúdo de acordo com o MAIN-AXIS.
 		
@@ -271,9 +271,21 @@ align-self : Vai alinhar o item de acordo com o CROSS-AXIS.
 	
 	* flex-start: Vai alinhar de acordo com o CROSS-START;
 
-	* flex-end: Vai alinhar de acordo com o CRODD-END;
+	* flex-end: Vai alinhar de acordo com o CROSS-END;
 
 	* center: Vai alinhar no centro do CROSS-AXIS;
 
 	* stretch: Vai esticar o item para ocupar todo o 
 		   CROSS-AXIS.
+
+
+flex-basis: É o atributo que determina a largura(row)/altura(column)
+	    de um item, dependendo do sentido do MAIN-AXIS.
+
+	* flex-basis: auto; : Vai fazer com que os itens se
+			      ajustem de acordo com o seu 
+			      conteúdo.
+
+	* flex-basis: 100px; : Vai fazer com que os itens tenham
+			       uma largura(row) ou altura(column)
+			       de 100px. 
