@@ -125,6 +125,7 @@ flex-flow: ShortHand para o flex-direction e flex-wrap.
 	(linha) e wrap: nowrap(sem quebra de linha).
 
 
+ALINHAMENTO DE ITENS NÃO IMPACOTADOS(nowrap)
 
 JUSTIFY-CONTENT
 
@@ -288,4 +289,68 @@ flex-basis: É o atributo que determina a largura(row)/altura(column)
 
 	* flex-basis: 100px; : Vai fazer com que os itens tenham
 			       uma largura(row) ou altura(column)
-			       de 100px. 
+			       de 100px. MAS NÃO É ABSOLUTO.
+			       Caso seja NOWRAP,
+			       e largura da tela seja menor que a
+			       largura dos itens, vai diminuir 
+			       o tamanho dos itens igualmente.
+			       Caso seja WRAP,
+			       Vai quebrar a linha e manter o 
+			       tamanho dos itens.
+
+
+CONTROLE DE TAMANHO DE ITENS FLEXIVEIS (NOWRAP)
+
+flex-grow: pode AUMENTAR ? 
+		Se for 0, NÃO PODE. 
+		Se for 1(ou mais) PODE.
+
+	ex.: flex-grow: 1; 
+
+	VAI AUMENTAR. E ocupar todo o tamanho disponivel.
+
+flex-shrink: pode ENCOLHER ?
+
+		* Se for 0, NÃO PODE. 
+		* Se for 1(ou mais) PODE.
+
+	ex.: flex-shrink: 1;
+		
+	VAI ENCOLHER. Até o máximo possivel.
+
+OBS.: QUANTO MAIOR O VALOR MAIS ELE VAI AUMENTAR OU DIMINUIR.
+
+	ex.: flex-grow: 4; 
+	     flex-shrink: 3;
+
+   Vai AUMENTAR proporcionalmente 4x mais que 1. E 2x mais que 2.
+   Vai DIMINUIR proporcionalment 3x mais que 1. E 1.5x mais que 2.
+
+
+
+SHORTHAND FLEX
+
+flex: Shorthand para os valores flex para itens(filhos).
+
+	1- flex-grow;
+	2- flex-shrink;
+	3- flex-basis;
+
+	ex.: flex: 0 1 150px;
+
+	Vai criar um item com grow=0, shrink=1, e basis=150px.
+
+flex: auto; : Para que o item seja 100% adaptável ao PAI.
+
+
+VALORES MUITO UTILIZADOS: 
+	
+	flex: 0 1 auto;  ==  flex: initial; (PADRÃO)
+
+	flex: 0 0 auto  ==  flex: none; (NADA FLEXIVEL)
+
+	flex: 1 1 auto ==  flex: auto; (100% FLEXIVEL)
+
+	flex: 3; ==  flex: 3 1 auto; (VAI ACRESCENTAR OS VALORES
+				      PADRÃO NOS ATRIBUTOS NÃO 
+				      DECLARADOS)
