@@ -245,7 +245,7 @@ align-content: Para alinhar os elementos empacotados(wrap) de
 
 				  
 
-AUTONOMIA DOS ITENS FLEXBOX(FILHOS)
+AUTONOMIA DOS ITENS FLEXBOX(SOMENTE PARA FILHOS)
 
 order :  Para alterar a ordem de um item dentro de uma flexbox.
 	 Cada elemento por padrão vem com 'order: 0', para
