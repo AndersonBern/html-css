@@ -1,24 +1,14 @@
 @media screen and (max-width: 600px) {
-    header {
-        width: 100vw;
+    header, menu {
         flex-flow: column nowrap;
-        align-content: center;
-        align-items: center;
-
-        padding: 0px;
     }
 
     header > h1 {
-        flex: auto;
-    }
-    menu {
-        width: 100%;
-        display: block;
-        text-align: center;
-
+        flex-basis: 40px;
     }
     
     menu > li {
-        margin: 5px
+        width: 90vw;
+        margin: 5px 5px 0px 5px;
     }
 }

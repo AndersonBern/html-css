@@ -15,6 +15,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
 
@@ -23,21 +24,20 @@ header > h1 {
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.74);
 
     flex-basis: 200px;
-    padding-top: 10px;
+    
 }
 menu {
-    margin: 5px;
     display: flex;
     flex-flow: row wrap;
 }
 
 menu > li {
     list-style-type: none;
-    flex: auto;
     margin: 5px;
     background-color: black;
     border-radius: 5px;
     padding: 10px;
+    text-align: center;
 }
 
 menu > li > a {
@@ -52,13 +52,10 @@ menu > li:hover {
     transition: 0.2s;
 }
 
-main {
+section {
     background-color: white;
     margin: 10px;
-    border-radius: 10px;
-    display: flex;
-}
-
-section {
     padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.555);
 }
