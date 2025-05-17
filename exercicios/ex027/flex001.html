@@ -9,13 +9,25 @@
             background-color: lightcoral;
 
             display: flex;
+            flex-flow: row wrap-reverse;
+            justify-content: space-around;
         }
-        .item {
+        .item1 {
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
 
-            flex: auto;
+            flex: 1 0 300px;
+            max-width: 500px;
+            align-self: flex-start;
+            
+        }
+        .item2 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+
+            flex: 0 0 300px;
             
         }
     </style>
@@ -23,13 +35,9 @@
 <body>
 
     <div class="container">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
+        <div class="item1">A</div>
+        <div class="item2">B</div>
+        
     </div>
     
 </body>
