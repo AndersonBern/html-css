@@ -1,0 +1,188 @@
+Grid Layout
+
+É um sistema de layout bidimensional que permite organizar 
+elementos em uma grade de linhas e colunas. Flexivel ou fixo.
+
+PARA USAR A FERRAMENTA PARA GRID VIEW NO CHROME:
+
+1- INSPECIONAR o seu site abrir o devtools;
+2- Ir em cima do seu container GRID; 
+3- Vai aparecer um icone'grid';
+4- CLIQUE EM GRID;
+5- PRONTO, agora seu conteiner grid estará todo demarcado.
+
+
+TERMOS
+
+
+grid item: Espaço que 1 item ocupa na grade.
+
+grid track: O espaço que uma linha/coluna de itens inteira ocupa.
+
+	* row track: Trilha de linha.
+	* column track: Trilha de coluna.
+
+grid lines: Linhas que separam os itens(horizontal/vertical).
+
+	Cada linha terá um número, a primeira: 1, a segunda: 2...
+	E cada linha também terá um numero negativo, que será
+	inversamente proporcional a quantidade de linhas.
+	ex.:
+	Em um container com 7 linhas. A linha 1 também será a -7.
+	A linha 2 também será a linha -6,
+	A linha 3 também será a linha -5, e etc...
+
+	Em um container com 7 linhas teremos:
+	6 ROW TRACKS/COLUMN TRACK.
+
+grid area: Espaço em uma grade que pode ocupar varios itens de
+	   de linha(grid row) e também de coluna(grid column). 
+
+grid gap: Espaço entre os itens de grade(grid items).
+
+
+
+PROPRIEDADES:
+
+display: grid; : Para criar um Grid container.
+
+grid-template-columns: auto auto; : Para criar 2 colunas
+				    no grid. Cada vez que 
+				    adicionamos o valor 'auto', 
+				    queremos uma nova coluna com 
+				    as mesmas medidas.
+
+grid-template-rows: 100px 100px; : Para criar 2 linhas com 100px
+				   de altura. Cada vez que 
+				   adicionamos um valor, criamos
+				   uma nova linha.
+				   Também poderia ser 'auto'.
+
+gap: 20px; : Para criar um espaço de 20px entre os itens.
+
+
+ALINHAMENTO DE ITENS
+
+align-items: Alinhamento VERTICAL para o conteúdo de cada
+	     elemento(item) de um Grid Layout.
+
+	* stretch (Padrão): Para esticar os itens.
+
+	* start: Para colar no inicio do item.
+
+	* center: Para centralizar o item.
+	
+	* end: Para colar no final do item.
+
+
+justify-items: Alinhamento HORIZONTAL para cada elemento(item)
+	       de um Grid Layout.
+
+	
+	* stretch (Padrão): Para esticar os itens.
+
+	* start: Para colar no inicio do item.
+
+	* center: Para centralizar o item.
+	
+	* end: Para colar no fim do item.
+
+
+ALINHAMENTO DE CONTEÚDO:
+
+align-content: Alinhamento VERTICAL para os elementos do 
+	       container(conteúdo) em um Grid Layout.
+
+	* stretch (Padrão): Para esticar ocontainer.
+
+	* start: Para colar no inicio do container.
+
+	* center: Para centralizar no container.
+	
+	* end: Para colar no fim do container.
+
+	* space-between: Para colar a primeira track no inicio, 
+	     		 e a ultima track no fim e criar
+			 um espaço igual entre eles.
+
+	* space-evenly: Para criar um espaço igual entre todas as
+			tracks.
+
+	* space-around: Vai separar o container dependendo do 
+			numero de tracks, centralizar as tracks
+			nesses espaços separados e criar um 
+			espaço igual de cada lado da track.
+
+
+justify-content: Alinhamento HORIZONTAL para os elementos do 
+		 container(conteúdo) em um Grid Layout.
+
+	* stretch (Padrão): Para esticar ocontainer.
+
+	* start: Para colar no inicio do container.
+
+	* center: Para centralizar no container.
+	
+	* end: Para colar no fim do container.
+
+	* space-between: Para colar a primeira track no 
+			 inicio, e a ultima track no fim e criar
+			 um espaço igual entre eles.
+
+	* space-evenly: Para criar um espaço igual entre todas as
+			tracks.
+
+	* space-around: Vai separar o container dependendo do 
+			numero de tracks, centralizar as tracks
+			nesses espaços separados e criar um 
+			espaço igual de cada lado da track.
+
+
+PARA CENTRALIZAR TODA A GRID
+
+ex.:  display: grid;
+      grid-template-columns:auto auto auto;
+      grid-template-rows: auto auto auto;
+      align-content: center;
+      justify-content: center;
+
+
+
+SIMPLIFICADORES
+
+Para os grids implicitos:
+
+grid-auto-row: 100px; : Para que toda vez que for adicionado uma 
+			nova linha, ela tenha 100px de altura.
+
+grid-auto-column: 100px; : Para que toda vez que for adicionado 
+			   uma nova linha, ela tenha 100px de 
+			   largura.
+
+ShortHands
+
+place-items: ShortHand para o align e justify items.
+
+	ex.: place-items: stretch center;
+
+	1- align-items;
+	2- justify-items.
+
+
+place-content: ShortHand para o align e justify content.
+
+	ex.: place-content: start end;
+
+	1- align-content;
+	2- justify-content.
+
+grid-template: ShortHand para grid-template-rows e 
+	       grid-template-columns.
+
+	ex.: grid-template: 100px 100px / auto auto;
+
+	1- grid-template-rows;
+	2- grid-template-columns.
+	OBS.: SEMPRE DEVE HAVER UMA BARRA(/) SEPARANDO OS VALORES.
+
+
