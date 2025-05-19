@@ -159,6 +159,18 @@ grid-auto-column: 100px; : Para que toda vez que for adicionado
 			   uma nova linha, ela tenha 100px de 
 			   largura.
 
+
+grid-auto-flow: row; : PARA ALTERAR A ORDEM DE EXIBIÇÃO DOS ITENS.
+		       Por padrão os itens são exibidos na 
+		       sequencia por linhas, um do lado do outro,
+		       e alterando o valor para COLUMN os itens
+		       serão exibidos um em baixo do outro.
+		       Para que toda vez que um novo item for
+		       adicionado, ser criado uma nova LINHA(row)
+		       Por PADRÃO, é ROW, mas caso seja necessário
+		       podemos alterar para COLUMN e será criada
+		       uma nova coluna. 
+
 ShortHands
 
 place-items: ShortHand para o align e justify items.
@@ -186,3 +198,55 @@ grid-template: ShortHand para grid-template-rows e
 	OBS.: SEMPRE DEVE HAVER UMA BARRA(/) SEPARANDO OS VALORES.
 
 
+Função repeat:
+
+	: repeat(N° de linhas/colunas, Medida);
+
+
+AO INVÉS DISSO:
+	* grid-template-rows: auto auto auto;
+
+USE ISSO:
+	* grid-template-rows: repeat(3, auto);
+
+
+Esta função é adequada para GRIDS que sejam muito extensos, e 
+seria necessário escrever muitas vezes as medidas de cada coluna
+ou linha.
+
+
+
+UNIDADE FRACIONAL
+
+Assim como o 'px'(pixel), a 'fr'(fração) também é uma unidade
+de medida, porém ela denomina um valor por meio de PARTES e não
+de valores unitários.
+
+	ex.: grid-template-columns: 1fr 2fr;
+		A primeira coluna terá UMA fração de um grid.
+		A segunda coluna terá DUAS frações de um grid.
+
+	É correto afirmar que o segunda coluna teria 2 TERÇOS de
+	um grid, enquanto a primeira tem 1 TERÇO.
+
+Outro exemplo: 
+
+	ex.: ex.: grid-template-columns: 1fr 2fr 1fr;
+
+	É correto afirmar que o grid tem 4 frações, e 3 colunas.
+	Também é correto afirmar que a SEGUNDA coluna terá o 
+	tamanho 2x maior que a PRIMEIRA e a TERCEIRA coluna.
+
+Outro exemplo: 
+
+	ex. ex.: grid-template-columns: 100px 20% 1fr 1fr;
+
+	1 coluna: Ocupará 100px.
+	2 coluna: Ocupará 20% do tamanho TOTAL do grid.
+	3 coluna: Ocupará 1 fração do ESPAÇO LIVRE que restou.
+	4 coluna: Ocupará 1 fração do ESPAÇO LIVRE que restou.
+
+	Ou seja: As frações SEMPRE são separadas apenas no espaço
+	LIVRE e não o espaço TOTAL.
+	
+		
