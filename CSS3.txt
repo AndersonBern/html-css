@@ -2,10 +2,9 @@ CSS3
 
 PARA ICONS
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-<span class="material-icons">face</span>
+<span class="material-symbols-outlined">circle</span>
 
 
 
